@@ -24,10 +24,10 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({ item }) => {
   }
   return (
     <div className='bg-white p-2 drop-shadow flex items-center justify-between rounded-lg mb-4'>
-      <div className='bg-gray mx-4 w-12 h-12 rounded-full'>
+      <div className='bg-gray mx-4 w-14 h-1/6 rounded-full'>
         <img
           src={item.image ? item.image : images.ic_user}
-          className='bg-auto m-auto rounded-full'
+          className='m-auto rounded-full w-full h-full'
           alt='User avatar'
         />
       </div>
@@ -45,8 +45,8 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({ item }) => {
           {item.status}
         </p>
       </div>
-      <div className='mx-2 self-start'>
-        <img src={images.ic_dots} alt='dots' />
+      <div className='mx-2 self-start h-4 min-w-fit'>
+        <img src={images.ic_dots} alt='dots' className='h-full' />
       </div>
     </div>
   )
