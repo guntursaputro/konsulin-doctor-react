@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Component } from 'views'
 
 type Props = {
   basename: string
@@ -14,6 +15,7 @@ const App: React.FC<Props> = ({ basename }) => {
         <div className='content' id='content'>
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/component' element={<Component />} />
           </Routes>
         </div>
       </BrowserRouter>
