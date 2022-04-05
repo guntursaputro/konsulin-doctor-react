@@ -2,20 +2,16 @@ import React from 'react'
 import images from 'assets/image'
 
 interface ConsultationItemProps {
-  image?: string
-  name: string
-  date: string
-  hour: string
-  status: string
+  item: {
+    image?: string
+    name: string
+    date: string
+    hour: string
+    status: string
+  }
 }
 
-export const ConsultationItem: React.FC<ConsultationItemProps> = ({
-  image,
-  name,
-  date,
-  hour,
-  status,
-}) => {
+export const ConsultationItem: React.FC<ConsultationItemProps> = ({ item }) => {
   const statusStyle = (status: string) => {
     switch (status) {
       case 'Online Sekarang':
@@ -30,23 +26,23 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({
     <div className='bg-white p-2 drop-shadow flex items-center justify-between rounded-lg mb-4'>
       <div className='bg-gray mx-4 w-12 h-12 rounded-full'>
         <img
-          src={image ? image : images.ic_user}
+          src={item.image ? item.image : images.ic_user}
           className='bg-auto m-auto rounded-full'
           alt='User avatar'
         />
       </div>
       <div className='flex flex-col grow gap-y-2 shrink'>
-        <p className='font-bold text-sm'>{name}</p>
+        <p className='font-bold text-sm'>{item.name}</p>
         <span className='flex gap-5'>
-          <p className='text-xs'>{date}</p>
-          <p className='text-xs'>Jam {hour}</p>
+          <p className='text-xs'>{item.date}</p>
+          <p className='text-xs'>Jam {item.hour}</p>
         </span>
         <p
           className={`px-2 py-1 w-max rounded-lg text-xs font-semi-bold mb-1 ${statusStyle(
-            status
+            item.status
           )}`}
         >
-          {status}
+          {item.status}
         </p>
       </div>
       <div className='mx-2 self-start'>
