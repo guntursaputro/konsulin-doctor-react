@@ -1,5 +1,5 @@
 import React from 'react'
-import { ConsultationItem } from 'components'
+import { ConsultationItem, ScheduleItem } from 'components'
 import { CONSULTATION_LIST } from 'utils/dumy'
 
 export const Component: React.FC = () => {
@@ -8,6 +8,7 @@ export const Component: React.FC = () => {
       {CONSULTATION_LIST?.map((item, index) => (
         <ConsultationItem key={index} item={item} />
       ))}
+      <ScheduleItem />
     </div>
   )
 }
