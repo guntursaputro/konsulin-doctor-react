@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-// import { Spinner } from 'components/Spinner'
+import { Spinner } from 'components/Spinner'
 import React from 'react'
 import './Button.scss'
 
@@ -26,7 +26,6 @@ export const Button: React.FC<ButtonProps> = ({
     e.stopPropagation()
     onClick()
   }
-
   return (
     <div
       className={clsx(
@@ -36,20 +35,20 @@ export const Button: React.FC<ButtonProps> = ({
       )}
       onClick={handleOnClick}
     >
-      {/* {isLoading ? (
+      {isLoading ? (
         <Spinner className='btn-spinner' />
-      ) : ( */}
-      <>
-        {icon && (
-          <img
-            className={clsx(`w-6 h-6 ${label ? 'mr-2' : ''}`, iconClassName)}
-            src={icon}
-            alt=''
-          />
-        )}
-        {label}
-      </>
-      {/* // )} */}
+      ) : (
+        <>
+          {icon && (
+            <img
+              className={clsx(`w-6 h-6 ${label ? 'mr-2' : ''}`, iconClassName)}
+              src={icon}
+              alt=''
+            />
+          )}
+          {label}
+        </>
+      )}
     </div>
   )
 }

@@ -1,3 +1,6 @@
 export { ConsultationItem } from './ConsultationItem'
 export { ProductItem } from './ProductItem'
 export { Button } from './Button/Button'
+export { ScheduleItem } from './ScheduleItem'
+export { Switch } from './Switch/Switch'
+export { Spinner } from './Spinner'
