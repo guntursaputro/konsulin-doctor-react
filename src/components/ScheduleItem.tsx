@@ -35,33 +35,18 @@ export const ScheduleItem: React.FC = () => {
               10.30 - 11.30
             </p>
           </div>
-          <div className='bg-neutral-10 rounded w-24'>
-            <p className='text-xs mx-2 my-1 text-center font-semi-bold'>
-              10.30 - 11.30
-            </p>
-          </div>
-          <div className='bg-neutral-10 rounded w-24'>
-            <p className='text-xs mx-2 my-1 text-center font-semi-bold'>
-              10.30 - 11.30
-            </p>
-          </div>
-          <div className='bg-neutral-10 rounded w-24'>
-            <p className='text-xs mx-2 my-1 text-center font-semi-bold'>
-              10.30 - 11.30
-            </p>
-          </div>
         </div>
         <div className='flex justify-between'>
           <Button
-            className='btn-tertiary font-xs mt-1'
+            className='btn-tertiary font-xs mt-1 !h-[2rem]'
             label='+ Buat Sesi Baru'
-            onClick={() => console.log('click')}
+            onClick={() => console.log('Buat Sesi Baru')}
           />
           <Button
-            className='text-xs font-semi-bold self-end'
+            className='text-xs font-semi-bold self-end !h-[2rem]'
             icon={images.ic_pencil}
             label='Ubah'
-            onClick={() => console.log('click')}
+            onClick={() => console.log('Ubah')}
           />
         </div>
       </div>
