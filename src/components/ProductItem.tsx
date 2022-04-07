@@ -47,7 +47,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
         />
         <div>
           <Button
-            className='btn-outline text-xs h-[40px] w-56'
+            className='btn-outline text-xs !h-[40px] !w-56'
             label='+ Masukan Rekomendasi'
             onClick={() => console.log('Rekomendasi')}
           />
