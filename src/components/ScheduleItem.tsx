@@ -12,13 +12,14 @@ export const ScheduleItem: React.FC = () => {
       <div className='flex justify-between content-center'>
         <p className='text-xs font-bold'>Senin</p>
         <div className='flex transition content-center'>
-          {isActive ? (
-            <p className='text-xxs text-primary-base font-semi-bold'>Aktif</p>
-          ) : (
-            <p className='text-xxs text-black-light font-semi-bold'>
-              Non Aktif
-            </p>
-          )}
+          <p
+            className={clsx(
+              'text-xxs font-semi-bold',
+              isActive ? 'text-primary-base' : 'text-black-light'
+            )}
+          >
+            {isActive ? 'Aktif' : 'Non Aktif'}
+          </p>
           <Switch
             className=' ml-1'
             name='isActive'
@@ -27,7 +28,7 @@ export const ScheduleItem: React.FC = () => {
           />
         </div>
       </div>
-      <div className={clsx(isActive ? '' : 'hidden')}>
+      <div className={isActive ? '' : 'hidden'}>
         <div className='grid grid-cols-3 my-4 gap-y-3'>
           <div className='bg-neutral-10 rounded w-24'>
             <p className='text-xs mx-2 my-1 text-center font-semi-bold'>
