@@ -38,8 +38,8 @@ export const ScheduleItem: React.FC<ScheduleItemProps> = ({ item }) => {
       </div>
       <div className={isActive ? '' : 'hidden'}>
         <div className='grid grid-cols-3 my-4 gap-y-3'>
-          {item.hour?.map((hour) => (
-            <div className='bg-neutral-10 rounded w-24'>
+          {item.hour?.map((hour, index) => (
+            <div className='bg-neutral-10 rounded w-24' key={index}>
               <p className='text-xs mx-2 my-1 text-center font-semi-bold'>
                 {hour}
               </p>
