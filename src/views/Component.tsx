@@ -1,13 +1,7 @@
 import React, { useState } from 'react'
 import images from 'assets/image'
-import {
-  ConsultationItem,
-  ScheduleItem,
-  Button,
-  Switch,
-  Spinner,
-} from 'components'
-import { CONSULTATION_LIST } from 'utils/dumy'
+import { ConsultationItem, ScheduleItem, Button, Switch } from 'components'
+import { CONSULTATION_LIST, SCHEDULE_LIST } from 'utils/dumy'
 
 export const Component: React.FC = () => {
   const [isActive, setActive] = useState(false)
@@ -17,7 +11,11 @@ export const Component: React.FC = () => {
       {CONSULTATION_LIST?.map((item, index) => (
         <ConsultationItem key={index} item={item} />
       ))}
-      <ScheduleItem />
+      {SCHEDULE_LIST?.map((item, index) => (
+        <ScheduleItem key={index} item={item} />
+      ))}
+
+      {/* button */}
       <div className='flex my-1 flex-col'>
         <div className='flex items-center'>
           <Button
@@ -39,7 +37,6 @@ export const Component: React.FC = () => {
             onClick={() => console.log('button Primary')}
           />
         </div>
-
         <div className='flex items-center'>
           <Button
             className='btn-secondary m-2'
@@ -53,7 +50,6 @@ export const Component: React.FC = () => {
             onClick={() => console.log('button Secondary')}
           />
         </div>
-
         <div className='flex items-center'>
           <Button
             className='btn-outline m-2'
@@ -68,6 +64,8 @@ export const Component: React.FC = () => {
           />
         </div>
       </div>
+
+      {/* switch */}
       <Switch
         className='my-1'
         name='isActive'

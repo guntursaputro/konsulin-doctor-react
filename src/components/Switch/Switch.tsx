@@ -20,7 +20,7 @@ export const Switch: React.FC<SwitchProps> = ({
     if (onChange) onChange(e)
   }
 
-  console.log(onChange)
+  // console.log(onChange)
   return (
     <label className={clsx('relative inline-block mb-0 w-8 h-4', className)}>
       <input

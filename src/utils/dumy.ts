@@ -23,11 +23,13 @@ export const CONSULTATION_LIST = [
 
 export const SCHEDULE_LIST = [
   {
-    date: '10 Januari 2022',
+    status: true,
+    date: 'Senin, 10 Januari 2022',
     hour: ['10:00 - 11.30', '12.00 - 14.00', '14.30 - 15.30'],
   },
   {
-    date: '11 Januari 2022',
+    status: false,
+    date: 'Rabu, 21 Januari 2022',
     hour: [
       '10:00 - 11.30',
       '12.00 - 14.00',
