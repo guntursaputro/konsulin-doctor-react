@@ -53,7 +53,10 @@ export const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
           />
         </div>
       </div>
-      <p className='' onClick={() => console.log('tambah')}>
+      <p
+        className='text-xs font-semi-bold mb-4'
+        onClick={() => console.log('tambah')}
+      >
         + Tambahkan Catatan
       </p>
     </div>

@@ -14,12 +14,12 @@ export const Component: React.FC = () => {
 
   return (
     <div className='flex justify-evenly flex-col gap-px'>
+      {/* Consultation list */}
       {CONSULTATION_LIST?.map((item, index) => (
         <ConsultationItem key={index} item={item} />
       ))}
-      {PRODUCT_LIST.map((item, index) => (
-        <ProductItem item={item} key={index} />
-      ))}
+
+      {/* Schedule list */}
       {SCHEDULE_LIST?.map((item, index) => (
         <ScheduleItem key={index} item={item} />
       ))}
@@ -81,6 +81,11 @@ export const Component: React.FC = () => {
         onChange={(e) => setActive(e.target.checked)}
         checked={isActive}
       />
+
+      {/* Product list */}
+      {PRODUCT_LIST.map((item, index) => (
+        <ProductItem item={item} key={index} />
+      ))}
     </div>
   )
 }
