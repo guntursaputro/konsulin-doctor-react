@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import images from 'assets/image'
+import images from 'assets/images'
 import {
   ConsultationItem,
   ScheduleItem,

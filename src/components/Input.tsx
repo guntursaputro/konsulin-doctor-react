@@ -1,4 +1,4 @@
-import images from 'assets/image'
+import images from 'assets/images'
 import clsx from 'clsx'
 import React from 'react'
 

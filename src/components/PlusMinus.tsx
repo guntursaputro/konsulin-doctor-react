@@ -1,4 +1,4 @@
-import images from 'assets/image'
+import images from 'assets/images'
 import clsx from 'clsx'
 import { Button } from 'components'
 import React, { useEffect, useState } from 'react'
@@ -75,8 +75,8 @@ export const PlusMinus: React.FC<PlusMinusProps> = ({
   return (
     <div className={clsx('flex items-center', className)}>
       <Button
-        className='rounded-full !p-0 !w-8 !h-8 !pt-1'
-        iconClassName='w-8 h-8'
+        className='rounded-full !p-0 !w-12 !h-12 !pt-1'
+        iconClassName='w-12 h-12'
         icon={images.ic_minus_white}
         disabled={value ? value <= min : false}
         onClick={() => decreaseValue()}
@@ -89,8 +89,8 @@ export const PlusMinus: React.FC<PlusMinusProps> = ({
         onBlur={({ target }) => handleOnBlur(target.value)}
       />
       <Button
-        className='rounded-full !p-0 !w-8 !h-8 !pt-1'
-        iconClassName='w-8 h-8'
+        className='rounded-full !p-0 !w-12 !h-12 !pt-1'
+        iconClassName='w-12 h-12'
         icon={images.ic_plus_yellow}
         disabled={value ? value >= max : false}
         onClick={() => increaseValue()}
