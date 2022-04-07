@@ -20,3 +20,22 @@ export const CONSULTATION_LIST = [
     status: 'Online Sekarang',
   },
 ]
+
+export const SCHEDULE_LIST = [
+  {
+    status: true,
+    date: 'Senin, 10 Januari 2022',
+    hour: ['10:00 - 11.30', '12.00 - 14.00', '14.30 - 15.30'],
+  },
+  {
+    status: false,
+    date: 'Rabu, 21 Januari 2022',
+    hour: [
+      '10:00 - 11.30',
+      '12.00 - 14.00',
+      '14.30 - 15.30',
+      '17.30 - 18.30',
+      '18.30 - 19.30',
+    ],
+  },
+]
