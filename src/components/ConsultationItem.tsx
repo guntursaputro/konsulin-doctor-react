@@ -1,5 +1,5 @@
 import React from 'react'
-import images from 'assets/image'
+import images from 'assets/images'
 
 interface ConsultationItemProps {
   item: {

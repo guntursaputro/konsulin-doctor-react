@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import clsx from 'clsx'
 import { Switch } from './Switch/Switch'
 import { Button } from './Button/Button'
-import images from '../assets/image'
+import images from '../assets/images'
 
 interface ScheduleItemProps {
   item: {

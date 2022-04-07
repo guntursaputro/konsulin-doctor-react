@@ -1,16 +1,25 @@
 import React, { useState } from 'react'
-import images from 'assets/image'
-import { ConsultationItem, ScheduleItem, Button, Switch } from 'components'
-import { CONSULTATION_LIST, SCHEDULE_LIST } from 'utils/dumy'
+import images from 'assets/images'
+import {
+  ConsultationItem,
+  ScheduleItem,
+  ProductItem,
+  Button,
+  Switch,
+} from 'components'
+import { CONSULTATION_LIST, SCHEDULE_LIST, PRODUCT_LIST } from 'utils/dumy'
 
 export const Component: React.FC = () => {
   const [isActive, setActive] = useState(false)
 
   return (
     <div className='flex justify-evenly flex-col gap-px'>
+      {/* Consultation list */}
       {CONSULTATION_LIST?.map((item, index) => (
         <ConsultationItem key={index} item={item} />
       ))}
+
+      {/* Schedule list */}
       {SCHEDULE_LIST?.map((item, index) => (
         <ScheduleItem key={index} item={item} />
       ))}
@@ -72,6 +81,11 @@ export const Component: React.FC = () => {
         onChange={(e) => setActive(e.target.checked)}
         checked={isActive}
       />
+
+      {/* Product list */}
+      {PRODUCT_LIST.map((item, index) => (
+        <ProductItem item={item} key={index} />
+      ))}
     </div>
   )
 }
