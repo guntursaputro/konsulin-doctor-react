@@ -1,4 +1,5 @@
 export * from './conversion'
 export * from './environment'
 export { LocalStorage } from './LocalStorage'
-export { default as numberSeparator } from './numberSeparator'
+export { numberSeparator } from './numberSeparator'
+export { renderStar } from './renderStar'

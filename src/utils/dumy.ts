@@ -26,7 +26,7 @@ export const PRODUCT_LIST = [
     image: 'https://placekitten.com/700',
     title: 'Bening Facial Wash',
     rate: 5,
-    price: '500.000',
+    price: 500000,
     store: 'Bening official store',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, soluta!',
@@ -35,7 +35,7 @@ export const PRODUCT_LIST = [
     image: 'https://placekitten.com/800',
     title: 'Viva Facial Wash',
     rate: 4,
-    price: '450.000',
+    price: 450000,
     store: 'Ayu Shop',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, soluta, Lorem ipsum dolor sit amet consectetur adipisicing elit!',
