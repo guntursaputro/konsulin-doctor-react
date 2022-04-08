@@ -7,6 +7,7 @@ import {
   Button,
   Switch,
   ReviewItem,
+  SummaryItem,
 } from 'components'
 import {
   CONSULTATION_LIST,
@@ -96,6 +97,8 @@ export const Component: React.FC = () => {
       {COMMENT_LIST?.map((item, index) => (
         <ReviewItem item={item} key={index} />
       ))}
+
+      <SummaryItem />
     </div>
   )
 }
