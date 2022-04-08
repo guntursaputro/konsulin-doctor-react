@@ -60,3 +60,24 @@ export const SCHEDULE_LIST = [
     ],
   },
 ]
+
+export const MEDICINE_LIST = [
+  {
+    name: 'Betametason 100-mg',
+    price: 25000,
+    amount: 1,
+    note: 'Oleskan tipis pada alergi bila terasa gatal',
+  },
+  {
+    name: 'Antithistamin-8 strip',
+    price: 125000,
+    amount: 4,
+    note: 'Minum 3 kali sehari sesudah makan',
+  },
+  {
+    name: 'Methylprednisone Azythromycin Cream 100-mg',
+    price: 225000,
+    amount: 1,
+    note: 'Oleskan sebelum tidur dan sesudah mandi',
+  },
+]

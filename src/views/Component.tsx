@@ -6,6 +6,7 @@ import {
   ProductItem,
   Button,
   Switch,
+  MedicineItem,
 } from 'components'
 import { CONSULTATION_LIST, SCHEDULE_LIST, PRODUCT_LIST } from 'utils/dumy'
 
@@ -86,6 +87,7 @@ export const Component: React.FC = () => {
       {PRODUCT_LIST.map((item, index) => (
         <ProductItem item={item} key={index} />
       ))}
+      <MedicineItem />
     </div>
   )
 }

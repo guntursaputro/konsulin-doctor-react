@@ -7,7 +7,9 @@ import ic_store from './ic_store.png'
 import ic_trash from './ic_trash.png'
 import ic_pencil from './ic_pencil.png'
 import ic_invalid from './ic_invalid.png'
+import ic_booklet from './ic_booklet.png'
 import ic_plus_yellow from './ic_plus_yellow.png'
+import ic_plus_white from './ic_plus_white.png'
 import ic_minus_white from './ic_minus_white.png'
 
 const images = {
@@ -17,11 +19,13 @@ const images = {
   ic_star,
   ic_store,
   ic_trash,
-  ic_plus_yellow,
-  ic_minus_white,
   ic_pencil,
   ic_invalid,
   ic_star_fill,
+  ic_booklet,
+  ic_plus_yellow,
+  ic_plus_white,
+  ic_minus_white,
 }
 
 export default images
