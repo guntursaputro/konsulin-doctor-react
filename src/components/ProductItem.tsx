@@ -59,7 +59,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
           </div>
         </div>
       </div>
-      <div className='flex my-4 justify-between'>
+      <div className='flex my-4 justify-between  items-center'>
         <PlusMinus
           onChange={(e) => setCount(e)}
           value={count}
