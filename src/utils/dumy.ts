@@ -63,9 +63,15 @@ export const SCHEDULE_LIST = [
 
 export const COMMENT_LIST = [
   {
+    rating: 5,
+    name: 'Agung',
+    comment:
+      'Memuaskan sekali, kulit saya jadi bersih dan makin sehat. Terimakasih Dok',
+  },
+  {
     rating: 4,
     name: 'Toto',
-    Comment:
+    comment:
       'Pelayanan konsultasi memuaskan, kulit saya jadi bersih dan makin sehat. Terimakasih Dok',
   },
 ]

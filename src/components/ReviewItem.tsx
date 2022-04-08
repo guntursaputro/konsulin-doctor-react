@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface ReviewItemProps {
-  item: { rating: number; name: string; note: string }
+  item: { rating: number; name: string; comment: string }
 }
 
 export const ReviewItem: React.FC<ReviewItemProps> = ({ item }) => {
