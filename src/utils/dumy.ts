@@ -74,10 +74,4 @@ export const MEDICINE_LIST = [
     amount: 4,
     note: 'Minum 3 kali sehari sesudah makan',
   },
-  {
-    name: 'Methylprednisone Azythromycin Cream 100-mg',
-    price: 225000,
-    amount: 1,
-    note: 'Oleskan sebelum tidur dan sesudah mandi',
-  },
 ]
