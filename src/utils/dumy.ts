@@ -60,3 +60,12 @@ export const SCHEDULE_LIST = [
     ],
   },
 ]
+
+export const COMMENT_LIST = [
+  {
+    rating: 4,
+    name: 'Toto',
+    Comment:
+      'Pelayanan konsultasi memuaskan, kulit saya jadi bersih dan makin sehat. Terimakasih Dok',
+  },
+]
