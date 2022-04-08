@@ -1,7 +1,6 @@
 import images from 'assets/images'
 import React from 'react'
 import { numberSeparator } from 'utils'
-import { Button } from './Button/Button'
 
 interface MedicineItemProps {
   item: { name: string; amount: number; price: number; note: string }
