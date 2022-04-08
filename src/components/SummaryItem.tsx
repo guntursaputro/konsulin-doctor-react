@@ -3,26 +3,36 @@ import React, { useState } from 'react'
 import { Button } from './Button/Button'
 import { Input } from './Input'
 
+interface SummaryItemProps {
+  note: string
+  summary: string[]
+}
+
 export const SummaryItem: React.FC = () => {
   const [form, setForm] = useState('')
-  console.log(form)
+  const summary = ['Kemerahan pada permukaan kulit', 'Ruam merah dan perih']
+  const [data, setData] = useState(summary)
+
+  const handleSubmit = () => {
+    setData([...data, form])
+    setForm('')
+  }
+
+  console.log('form:', form, 'sum:', data)
   return (
     <div>
-      <div className='flex justify-between mt-3 items-center'>
-        <p className='text-xs'>Gatal-Gatal pada permukaan kulit</p>
-        <img src={images.ic_pencil} alt='pencil edit' className='w-5 h-5' />
-      </div>
-      <div className='flex justify-between mt-3 items-center'>
-        <p className='text-xs'>Ruam merah dan perih</p>
-        <img src={images.ic_pencil} alt='pencil edit' className='w-5 h-5' />
-      </div>
+      {data?.map((item) => (
+        <div className='flex justify-between mt-3 items-center'>
+          <p className='text-xs'>{item}</p>
+          <img src={images.ic_pencil} alt='pencil edit' className='w-5 h-5' />
+        </div>
+      ))}
       <div className='flex items-center mt-2'>
         <Button
           className='!p-0 !h-fit mr-2'
           icon={images.ic_plus_yellow}
-          onClick={() => console.log('Submit')}
+          onClick={() => handleSubmit()}
         />
-
         <Input
           className='w-4/5'
           placeholder='Tambah Keluhan'
