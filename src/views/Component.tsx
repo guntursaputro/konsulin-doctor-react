@@ -6,8 +6,14 @@ import {
   ProductItem,
   Button,
   Switch,
+  MedicineItem,
 } from 'components'
-import { CONSULTATION_LIST, SCHEDULE_LIST, PRODUCT_LIST } from 'utils/dumy'
+import {
+  CONSULTATION_LIST,
+  SCHEDULE_LIST,
+  PRODUCT_LIST,
+  MEDICINE_LIST,
+} from 'utils/dumy'
 
 export const Component: React.FC = () => {
   const [isActive, setActive] = useState(false)
@@ -83,8 +89,11 @@ export const Component: React.FC = () => {
       />
 
       {/* Product list */}
-      {PRODUCT_LIST.map((item, index) => (
+      {PRODUCT_LIST?.map((item, index) => (
         <ProductItem item={item} key={index} />
+      ))}
+      {MEDICINE_LIST?.map((item, index) => (
+        <MedicineItem item={item} key={index} />
       ))}
     </div>
   )
