@@ -75,3 +75,17 @@ export const COMMENT_LIST = [
       'Pelayanan konsultasi memuaskan, kulit saya jadi bersih dan makin sehat. Terimakasih Dok',
   },
 ]
+export const MEDICINE_LIST = [
+  {
+    name: 'Betametason 100-mg',
+    price: 25000,
+    amount: 1,
+    note: 'Oleskan tipis pada alergi bila terasa gatal',
+  },
+  {
+    name: 'Antithistamin-8 strip',
+    price: 125000,
+    amount: 4,
+    note: 'Minum 3 kali sehari sesudah makan',
+  },
+]
