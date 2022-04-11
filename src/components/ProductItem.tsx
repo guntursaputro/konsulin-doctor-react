@@ -83,7 +83,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
         </p>
         <Input
           type='text-area'
-          className={`text-xs h-11 mb-4', ${active ? 'mb-4' : 'hidden'}`}
+          className={`text-xxs h-11 mb-4', ${active ? 'mb-4' : 'hidden'}`}
           value={form}
           name='note'
           onChange={(e) => setForm(e.value)}
