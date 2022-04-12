@@ -5,6 +5,7 @@ import { Button } from './Button/Button'
 import images from '../assets/images'
 
 interface ScheduleItemProps {
+  className?: string
   item: {
     date: string
     status: boolean
@@ -12,11 +13,19 @@ interface ScheduleItemProps {
   }
 }
 
-export const ScheduleItem: React.FC<ScheduleItemProps> = ({ item }) => {
+export const ScheduleItem: React.FC<ScheduleItemProps> = ({
+  className,
+  item,
+}) => {
   const [isActive, setActive] = useState(item.status)
 
   return (
-    <div className='bg-white drop-shadow flex flex-col px-4 py-3 mb-3 justify-start rounded-lg'>
+    <div
+      className={clsx(
+        'bg-white drop-shadow flex flex-col px-4 py-3 mb-3 justify-start rounded-lg',
+        className
+      )}
+    >
       <div className='flex justify-between content-center'>
         <p className='text-xs font-bold'>{item.date}</p>
         <div className='flex transition content-center'>
