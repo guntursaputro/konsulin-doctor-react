@@ -2,10 +2,15 @@ import images from 'assets/images'
 import React, { useState } from 'react'
 import { Button } from './Button/Button'
 import { Input } from './Input'
-import { Sum } from './Sum'
+import { SumItem } from './SumItem'
 import { SUMMARY_LIST } from 'utils/dumy'
+import clsx from 'clsx'
 
-export const SummaryItem: React.FC = () => {
+interface SummaryItemProps {
+  className?: string
+}
+
+export const SummaryItem: React.FC<SummaryItemProps> = ({ className }) => {
   const [sum, setSum] = useState('')
   const [data, setData] = useState(SUMMARY_LIST)
 
@@ -15,10 +20,10 @@ export const SummaryItem: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className={(clsx('flex flex-col'), className)}>
       <div>
         {data.map((sum) => (
-          <Sum sum={sum} data={data} setData={setData} key={sum.id} />
+          <SumItem sum={sum} data={data} setData={setData} key={sum.id} />
         ))}
       </div>
       <div className='flex items-center mt-2'>
