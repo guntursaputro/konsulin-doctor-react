@@ -2,44 +2,50 @@ import images from 'assets/images'
 import React, { useState } from 'react'
 import { Button } from './Button/Button'
 import { Input } from './Input'
+import { Sum } from './Sum'
 
-interface SummaryItemProps {
-  note: string
-  summary: string[]
-}
+export const SUMMARY_LIST = [
+  {
+    id: 1,
+    summary: 'Kemerahan pada permukaan kulit',
+  },
+  {
+    id: 2,
+    summary: 'Bercak merah di area hidung',
+  },
+]
 
 export const SummaryItem: React.FC = () => {
-  const [form, setForm] = useState('')
-  const summary = ['Kemerahan pada permukaan kulit', 'Ruam merah dan perih']
-  const [data, setData] = useState(summary)
+  const [sum, setSum] = useState('')
+  const [data, setData] = useState(SUMMARY_LIST)
 
-  const handleSubmit = () => {
-    setData([...data, form])
-    setForm('')
+  const handleAdd = () => {
+    setData([...data, { id: Math.random(), summary: sum }])
+    setSum('')
   }
 
-  console.log('form:', form, 'sum:', data)
+  console.log(data)
+
   return (
     <div>
-      {data?.map((item) => (
-        <div className='flex justify-between mt-3 items-center'>
-          <p className='text-xs'>{item}</p>
-          <img src={images.ic_pencil} alt='pencil edit' className='w-5 h-5' />
-        </div>
-      ))}
+      <div>
+        {data.map((data) => (
+          <Sum data={data} />
+        ))}
+      </div>
       <div className='flex items-center mt-2'>
         <Button
           className='!p-0 !h-fit mr-2'
           icon={images.ic_plus_yellow}
-          onClick={() => handleSubmit()}
+          onClick={handleAdd}
         />
         <Input
           className='w-4/5'
           placeholder='Tambah Keluhan'
           inputClass='!p-0 text-xs !border-hidden bg-transparent'
           name='input'
-          value={form}
-          onChange={(e) => setForm(e.value)}
+          value={sum}
+          onChange={(e) => setSum(e.value)}
         />
       </div>
     </div>
