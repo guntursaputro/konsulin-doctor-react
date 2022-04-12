@@ -14,7 +14,7 @@ interface InputProps {
   rows?: number
   icon?: string
   error?: string
-  edit?: boolean
+  auto?: boolean
   onChange: (e: any) => void
 }
 
@@ -30,7 +30,7 @@ export const Input: React.FC<InputProps> = ({
   rows,
   icon,
   error,
-  edit,
+  auto,
   onChange,
 }) => {
   const handleOnChange = (e: any) => {
@@ -41,7 +41,7 @@ export const Input: React.FC<InputProps> = ({
   const inputRef = useRef<HTMLInputElement>(null)
   useEffect(() => {
     inputRef.current?.focus()
-  }, [edit])
+  }, [auto])
 
   const handleOnKeyDown = (e: any) => {
     if (

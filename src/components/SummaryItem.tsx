@@ -3,17 +3,7 @@ import React, { useState } from 'react'
 import { Button } from './Button/Button'
 import { Input } from './Input'
 import { Sum } from './Sum'
-
-export const SUMMARY_LIST = [
-  {
-    id: 1,
-    summary: 'Kemerahan pada permukaan kulit',
-  },
-  {
-    id: 2,
-    summary: 'Bercak merah di area hidung',
-  },
-]
+import { SUMMARY_LIST } from 'utils/dumy'
 
 export const SummaryItem: React.FC = () => {
   const [sum, setSum] = useState('')
@@ -24,13 +14,11 @@ export const SummaryItem: React.FC = () => {
     setSum('')
   }
 
-  console.log(data)
-
   return (
     <div>
       <div>
-        {data.map((data) => (
-          <Sum data={data} />
+        {data.map((sum) => (
+          <Sum sum={sum} data={data} setData={setData} key={sum.id} />
         ))}
       </div>
       <div className='flex items-center mt-2'>

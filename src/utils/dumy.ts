@@ -89,3 +89,14 @@ export const MEDICINE_LIST = [
     note: 'Minum 3 kali sehari sesudah makan',
   },
 ]
+
+export const SUMMARY_LIST = [
+  {
+    id: 1,
+    summary: 'Kemerahan pada permukaan kulit',
+  },
+  {
+    id: 2,
+    summary: 'Bercak merah di area hidung',
+  },
+]
