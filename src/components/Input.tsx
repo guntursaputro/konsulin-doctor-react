@@ -1,6 +1,6 @@
 import images from 'assets/images'
 import clsx from 'clsx'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 interface InputProps {
   className?: string
@@ -14,6 +14,7 @@ interface InputProps {
   rows?: number
   icon?: string
   error?: string
+  edit?: boolean
   onChange: (e: any) => void
 }
 
@@ -29,12 +30,18 @@ export const Input: React.FC<InputProps> = ({
   rows,
   icon,
   error,
+  edit,
   onChange,
 }) => {
   const handleOnChange = (e: any) => {
     const { name, value } = e.target
     onChange({ name: name, value: value })
   }
+
+  const inputRef = useRef<HTMLInputElement>(null)
+  useEffect(() => {
+    inputRef.current?.focus()
+  }, [edit])
 
   const handleOnKeyDown = (e: any) => {
     if (
@@ -85,6 +92,7 @@ export const Input: React.FC<InputProps> = ({
             onChange={handleOnChange}
             autoComplete='off'
             onKeyDown={handleOnKeyDown}
+            ref={inputRef}
           />
         </div>
       )}
