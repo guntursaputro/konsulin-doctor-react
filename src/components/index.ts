@@ -8,3 +8,5 @@ export { Switch } from './Switch/Switch'
 export { Spinner } from './Spinner'
 export { Input } from './Input'
 export { MedicineItem } from './MedicineItem'
+
+export { SumItem } from './SumItem'
