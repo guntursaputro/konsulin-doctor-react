@@ -1,6 +1,13 @@
 import React, { lazy, Suspense } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Component } from 'views'
+import {
+  BrowserRouter,
+  Navigate,
+  Outlet,
+  Route,
+  Routes,
+} from 'react-router-dom'
+import { Component, Register } from 'views'
+import { isLogin } from 'utils/auth'
 
 type Props = {
   basename: string
@@ -9,15 +16,31 @@ type Props = {
 const Home = lazy(() => import('views/Home'))
 
 const App: React.FC<Props> = ({ basename }) => {
+  const ProtectedRoute = ({ wrapperContent = true }) => {
+    if (isLogin()) {
+      return <Navigate to='/home' replace />
+    }
+    return wrapperContent ? (
+      <div className='content' id='content'>
+        <Outlet />
+      </div>
+    ) : (
+      <Outlet />
+    )
+  }
+
   return (
     <Suspense fallback={() => 'loading ....'}>
       <BrowserRouter basename={basename}>
-        <div className='content' id='content'>
-          <Routes>
-            <Route path='/' element={<Home />} />
+        <Routes>
+          <Route element={<ProtectedRoute wrapperContent={false} />}>
+            <Route path='/' element={<Register />} />
+          </Route>
+          <Route path='/home' element={<Home />} />
+          <Route element={<ProtectedRoute />}>
             <Route path='/component' element={<Component />} />
-          </Routes>
-        </div>
+          </Route>
+        </Routes>
       </BrowserRouter>
     </Suspense>
   )
