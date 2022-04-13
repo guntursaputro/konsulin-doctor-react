@@ -1,16 +1,19 @@
 import images from 'assets/images'
 import React, { useState } from 'react'
 import { InputPhone, Button } from 'components'
+import { useNavigate } from 'react-router-dom'
 
 export const Register: React.FC = () => {
   const [phone, setPhone] = useState('')
+  const navigate = useNavigate()
+
   const onSubmit = () => {
-    console.log('submit')
+    navigate('/pasword-input')
   }
 
   return (
-    <div className='content-full bg-gradient flex flex-col'>
-      <div className='relative'>
+    <div className='content-full bg-white flex flex-col'>
+      <div>
         <img
           src={images.ic_login_splash}
           alt=''
@@ -21,11 +24,12 @@ export const Register: React.FC = () => {
           <img src={images.ic_dokter} alt='' className='w-32 float-right' />
         </div>
       </div>
-      <div className='bg-white rounded-t-2xl px-8 pt-10 -mt-3 relative'>
-        <p className='font-bold text-3xl mb-4'>{`Login/Register`}</p>
-        <p className='text-neutral-30 text-sm mb-8'>
+
+      <div className='bg-white rounded-t-2xl z-10 -mt-3 px-8 pb-8'>
+        <div className='font-bold text-3xl mb-4 mt-8'>{`Login/Register`}</div>
+        <div className='text-neutral-30 text-sm mb-8'>
           {'Masukkan Nomor Hp untuk Login/Register'}
-        </p>
+        </div>
         <InputPhone
           className='mb-4'
           name='phone'
@@ -35,11 +39,11 @@ export const Register: React.FC = () => {
         />
 
         <Button
-          className='btn-primary !w-full mb-2'
+          className='btn-primary !w-full'
           label='Masuk'
           onClick={onSubmit}
         />
-        <p className='text-center mb-10'>{`Lupa PIN? Klik Disini`}</p>
+        <div className='text-center mt-2'>{`Lupa PIN? Klik Disini`}</div>
       </div>
     </div>
   )
