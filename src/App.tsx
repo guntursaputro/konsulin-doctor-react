@@ -34,7 +34,7 @@ const App: React.FC<Props> = ({ basename }) => {
       <BrowserRouter basename={basename}>
         <Routes>
           <Route element={<ProtectedRoute wrapperContent={false} />}>
-            <Route path='/' element={<Register />} />
+            <Route path='/register' element={<Register />} />
           </Route>
           <Route path='/home' element={<Home />} />
           <Route element={<ProtectedRoute />}>
