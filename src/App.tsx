@@ -16,6 +16,19 @@ type Props = {
 const Home = lazy(() => import('views/Home'))
 
 const App: React.FC<Props> = ({ basename }) => {
+  const PrivateRoute = ({ wrapperContent = true }) => {
+    if (isLogin()) {
+      return <Navigate to='/' replace />
+    }
+    return wrapperContent ? (
+      <div className='content' id='content'>
+        <Outlet />
+      </div>
+    ) : (
+      <Outlet />
+    )
+  }
+
   const ProtectedRoute = ({ wrapperContent = true }) => {
     if (isLogin()) {
       return <Navigate to='/home' replace />
@@ -36,7 +49,9 @@ const App: React.FC<Props> = ({ basename }) => {
           <Route element={<ProtectedRoute wrapperContent={false} />}>
             <Route path='/register' element={<Register />} />
           </Route>
-          <Route path='/home' element={<Home />} />
+          <Route element={<PrivateRoute />}>
+            <Route path='/home' element={<Home />} />
+          </Route>
           <Route element={<ProtectedRoute />}>
             <Route path='/component' element={<Component />} />
           </Route>

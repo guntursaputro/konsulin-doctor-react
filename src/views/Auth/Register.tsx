@@ -43,7 +43,12 @@ export const Register: React.FC = () => {
           label='Masuk'
           onClick={onSubmit}
         />
-        <div className='text-center mt-2'>{`Lupa PIN? Klik Disini`}</div>
+        <b></b>
+        <div className='text-center mt-2 text-sm'>
+          <p>
+            Lupa PIN ? <b>Klik Disini</b>
+          </p>
+        </div>
       </div>
     </div>
   )
