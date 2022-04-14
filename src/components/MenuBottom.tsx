@@ -31,7 +31,7 @@ export const MenuBottom: React.FC<MenuBottomProps> = ({ menu }) => {
           to={item.to}
           className='flex flex-1 items-center justify-center text-xxs'
         >
-          <div className='group relative flex flex-col items-center justify-center text-center w-full h-[4rem]'>
+          <div className='group relative flex flex-col items-center justify-center text-center w-full h-[4rem] '>
             {item.icon && item.icon_active ? (
               <div className='flex items-center justify-center'>
                 <img

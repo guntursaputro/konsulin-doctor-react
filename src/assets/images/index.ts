@@ -20,6 +20,12 @@ import ic_login_splash from './ic_login_splash.png'
 import ic_notification from './ic_notifications.png'
 import ic_consultation_group from './ic_consultation_group.png'
 import ic_calender from './ic_calender.png'
+import ic_consulting_active from './ic_consulting_active.png'
+import ic_consulting_inactive from './ic_consulting_inactive.png'
+import ic_home_active from './ic_home_active.png'
+import ic_home_inactive from './ic_home_inactive.png'
+import ic_profile_active from './ic_profile_active.png'
+import ic_profile_inactive from './ic_profile_inactive.png'
 
 const images = {
   bg_home,
@@ -44,6 +50,12 @@ const images = {
   ic_notification,
   ic_consultation_group,
   ic_calender,
+  ic_consulting_active,
+  ic_consulting_inactive,
+  ic_home_active,
+  ic_home_inactive,
+  ic_profile_active,
+  ic_profile_inactive,
 }
 
 export default images
