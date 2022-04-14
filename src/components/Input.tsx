@@ -14,7 +14,6 @@ interface InputProps {
   rows?: number
   icon?: string
   error?: string
-  auto?: boolean
   onChange: (e: any) => void
 }
 
@@ -30,18 +29,12 @@ export const Input: React.FC<InputProps> = ({
   rows,
   icon,
   error,
-  auto,
   onChange,
 }) => {
   const handleOnChange = (e: any) => {
     const { name, value } = e.target
     onChange({ name: name, value: value })
   }
-
-  const inputRef = useRef<HTMLInputElement>(null)
-  useEffect(() => {
-    inputRef.current?.focus()
-  }, [auto])
 
   const handleOnKeyDown = (e: any) => {
     if (
@@ -92,7 +85,6 @@ export const Input: React.FC<InputProps> = ({
             onChange={handleOnChange}
             autoComplete='off'
             onKeyDown={handleOnKeyDown}
-            ref={inputRef}
           />
         </div>
       )}
