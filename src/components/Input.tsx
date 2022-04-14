@@ -1,6 +1,6 @@
 import images from 'assets/images'
 import clsx from 'clsx'
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 
 interface InputProps {
   className?: string
