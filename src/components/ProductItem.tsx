@@ -4,8 +4,10 @@ import { Button } from './Button/Button'
 import { Input } from 'components'
 import { PlusMinus } from './PlusMinus'
 import { renderStar, numberSeparator } from 'utils'
+import clsx from 'clsx'
 
 interface ProductItemProps {
+  className?: string
   item: {
     image: string
     title: string
@@ -16,7 +18,10 @@ interface ProductItemProps {
   }
 }
 
-export const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
+export const ProductItem: React.FC<ProductItemProps> = ({
+  className,
+  item,
+}) => {
   const [active, setActive] = useState(false)
   const [form, setForm] = useState('')
   const [count, setCount] = useState(0)
@@ -34,7 +39,12 @@ export const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
   }, [value])
 
   return (
-    <div className='flex flex-col border-b-[1px] border-dashed pb-4'>
+    <div
+      className={clsx(
+        'flex flex-col border-b-[1px] border-dashed pb-4',
+        className
+      )}
+    >
       <div className='flex mt-4'>
         <div className='bg-neutral-10 rounded-md max-w-[100px] max-h-[100px] mr-4 drop-shadow'>
           <img src={item.image} alt={item.title} className='rounded-md' />
@@ -59,7 +69,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
           </div>
         </div>
       </div>
-      <div className='flex my-4 justify-between'>
+      <div className='flex my-4 justify-between  items-center'>
         <PlusMinus
           onChange={(e) => setCount(e)}
           value={count}

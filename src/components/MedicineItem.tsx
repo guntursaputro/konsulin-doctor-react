@@ -1,14 +1,19 @@
 import images from 'assets/images'
+import clsx from 'clsx'
 import React from 'react'
 import { numberSeparator } from 'utils'
 
 interface MedicineItemProps {
+  className?: string
   item: { name: string; amount: number; price: number; note: string }
 }
 
-export const MedicineItem: React.FC<MedicineItemProps> = ({ item }) => {
+export const MedicineItem: React.FC<MedicineItemProps> = ({
+  className,
+  item,
+}) => {
   return (
-    <div className='mt-6'>
+    <div className={clsx('mt-6', className)}>
       <div className='flex flex-col'>
         <div className='flex justify-between mb-2'>
           <p className='text-xxs font-bold w-3/6'>{item.name}</p>

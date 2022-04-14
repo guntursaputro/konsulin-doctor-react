@@ -1,7 +1,9 @@
 import React from 'react'
 import images from 'assets/images'
+import clsx from 'clsx'
 
 interface ConsultationItemProps {
+  className?: string
   item: {
     image?: string
     name: string
@@ -11,7 +13,10 @@ interface ConsultationItemProps {
   }
 }
 
-export const ConsultationItem: React.FC<ConsultationItemProps> = ({ item }) => {
+export const ConsultationItem: React.FC<ConsultationItemProps> = ({
+  item,
+  className,
+}) => {
   const statusStyle = (status: string) => {
     switch (status) {
       case 'Online Sekarang':
@@ -23,7 +28,12 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({ item }) => {
     }
   }
   return (
-    <div className='bg-white p-2 drop-shadow flex items-center justify-between rounded-lg mb-4'>
+    <div
+      className={clsx(
+        'bg-white p-2 drop-shadow flex items-center justify-between rounded-lg mb-4',
+        className
+      )}
+    >
       <div className='bg-gray mx-4 w-14 h-1/6 rounded-full'>
         <img
           src={item.image ? item.image : images.ic_user}
