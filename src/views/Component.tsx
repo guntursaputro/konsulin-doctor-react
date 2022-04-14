@@ -19,6 +19,7 @@ import {
 } from 'utils/dumy'
 
 export const Component: React.FC = () => {
+  const [data, setData] = useState<Array<string>>([])
   const [isActive, setActive] = useState(false)
 
   return (
@@ -104,7 +105,7 @@ export const Component: React.FC = () => {
         <MedicineItem item={item} key={index} />
       ))}
 
-      <SummaryItem />
+      <SummaryItem data={data} onUpdate={(e) => setData([...e])} />
     </div>
   )
 }
