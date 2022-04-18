@@ -11,9 +11,11 @@ interface ConsultationItemProps {
     hour: string
     status: string
   }
+  onClick: (e: any) => void
 }
 
 export const ConsultationItem: React.FC<ConsultationItemProps> = ({
+  onClick,
   item,
   className,
 }) => {
@@ -34,6 +36,7 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({
         'bg-white p-2 drop-shadow flex items-center justify-between rounded-lg mb-4',
         className
       )}
+      onClick={onClick}
     >
       <div className='bg-gray mx-4 w-14 h-1/6 rounded-full'>
         <img
