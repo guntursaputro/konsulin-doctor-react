@@ -17,7 +17,14 @@ export const CONSULTATION_LIST = [
     name: 'Nalendro Agung',
     date: '2 Maret 2022',
     hour: '17:30',
-    status: 'Online Sekarang',
+    status: 'Online',
+  },
+  {
+    image: 'https://placekitten.com/520',
+    name: 'Diego Costa',
+    date: '28 Maret 2022',
+    hour: '17:30',
+    status: '1 hari 1 jam',
   },
 ]
 
