@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
-import { isTemplateLiteralTypeSpan } from 'typescript'
 
 interface MenuItem {
   icon: string | null
