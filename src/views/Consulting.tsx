@@ -1,5 +1,11 @@
+import { Banner } from 'components'
 import React from 'react'
 
 export const Consulting: React.FC = () => {
-  return <div>Consulting</div>
+  return (
+    <div className='-mt-[4rem]'>
+      <Banner />
+      Consulting
+    </div>
+  )
 }

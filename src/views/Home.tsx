@@ -1,5 +1,5 @@
 import images from 'assets/images'
-import { ConsultationItem, ScheduleItem, Switch } from 'components'
+import { Banner, ConsultationItem, ScheduleItem, Switch } from 'components'
 import React, { useState } from 'react'
 import clsx from 'clsx'
 import { CONSULTATION_LIST, SCHEDULE_LIST } from 'utils/dumy'
@@ -9,15 +9,8 @@ export const Home: React.FC = () => {
 
   return (
     <div className='-mt-[4rem]'>
-      <div className='relative -mx-4'>
-        <img src={images.bg_home} alt='' className='absolute -mt-4 w-full' />
-        <img
-          src={images.ic_notification}
-          alt=''
-          className='absolute h-4 w-[14px] right-0 mr-5'
-        />
-      </div>
-      <div className='pt-[4rem] bg-white -mx-4 p-4 mb-4'>
+      <Banner />
+      <div className='pt-[5rem] bg-white -mx-4 p-4 mb-4'>
         <div className='mt-[2rem] mb-2'>
           <div className='flex items-center justify-between '>
             <div className='w-1/2'>
