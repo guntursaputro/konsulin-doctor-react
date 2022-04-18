@@ -65,7 +65,7 @@ export const Tabs: React.FC<TabsProps> = ({
         ))}
       </div>
       <div
-        className={`relative bg-primary-base h-0.5 transition-all ease-in-out duration-300`}
+        className={`relative bg-secondary h-0.5 transition-all ease-in-out duration-300`}
         style={{ width: widthIndicator, left: positionIndicator }}
       />
     </div>
