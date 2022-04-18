@@ -20,7 +20,10 @@ import {
 
 export const Component: React.FC = () => {
   const [data, setData] = useState<Array<string>>([])
+  const [scheduleData, setScheduleData] = useState<Array<any>>(SCHEDULE_LIST)
   const [isActive, setActive] = useState(false)
+
+  console.log(scheduleData)
 
   return (
     <div className='flex justify-evenly flex-col gap-px'>
@@ -30,8 +33,13 @@ export const Component: React.FC = () => {
       ))}
 
       {/* Schedule list */}
-      {SCHEDULE_LIST?.map((item, index) => (
-        <ScheduleItem key={index} item={item} />
+      {scheduleData?.map((item, index) => (
+        <ScheduleItem
+          key={index}
+          item={item}
+          active
+          onChange={() => setScheduleData([...scheduleData])}
+        />
       ))}
 
       {/* button */}
