@@ -11,14 +11,6 @@ export const Home: React.FC = () => {
     <div className='-mt-[4rem]'>
       <div className='relative -mx-4'>
         <img src={images.bg_home} alt='' className='absolute -mt-4 w-full' />
-        <div className='absolute top-3 left-[5.5rem] mx-16'>
-          <img src={images.ic_konsulin_white} alt='' className='mb-1 w-32' />
-          <img
-            src={images.ic_dokter_white}
-            alt=''
-            className='w-14 float-right'
-          />
-        </div>
         <img
           src={images.ic_notification}
           alt=''
@@ -85,7 +77,7 @@ export const Home: React.FC = () => {
       </div>
       <div>
         {SCHEDULE_LIST?.map((item) => (
-          <ScheduleItem item={item} />
+          <ScheduleItem item={item} onChange={(e) => console.log(e)} />
         ))}
       </div>
     </div>
