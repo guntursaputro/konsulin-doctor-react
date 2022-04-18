@@ -19,10 +19,6 @@ export const Register: React.FC = () => {
           alt=''
           className='relative top-0 right-0'
         />
-        <div className='absolute z-50 top-0 left-5 mx-16 mt-12'>
-          <img src={images.ic_konsulin} alt='' className='w-64' />
-          <img src={images.ic_dokter} alt='' className='w-32 float-right' />
-        </div>
       </div>
 
       <div className='bg-white rounded-t-2xl z-10 -mt-3 px-8 pb-8'>
@@ -43,12 +39,9 @@ export const Register: React.FC = () => {
           label='Masuk'
           onClick={onSubmit}
         />
-        <b></b>
-        <div className='text-center mt-2 text-sm'>
-          <p>
-            Lupa PIN ? <b>Klik Disini</b>
-          </p>
-        </div>
+        <p className='text-center text-sm mt-4'>
+          Lupa PIN ? <b className='font-bold'>Klik Disini</b>
+        </p>
       </div>
     </div>
   )

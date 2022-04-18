@@ -73,10 +73,10 @@ export const PlusMinus: React.FC<PlusMinusProps> = ({
   }, [value])
 
   return (
-    <div className={clsx('flex items-center', className)}>
+    <div className={clsx('flex items-center gap-1.5', className)}>
       <Button
-        className='rounded-full !p-0 !w-12 !h-12 !pt-1'
-        iconClassName='w-12 h-12'
+        className='rounded-full !p-0 h-0'
+        iconClassName='w-6 h-6'
         icon={images.ic_minus_white}
         disabled={value ? value <= min : false}
         onClick={() => decreaseValue()}
@@ -89,8 +89,8 @@ export const PlusMinus: React.FC<PlusMinusProps> = ({
         onBlur={({ target }) => handleOnBlur(target.value)}
       />
       <Button
-        className='rounded-full !p-0 !w-12 !h-12 !pt-1'
-        iconClassName='w-12 h-12'
+        className='rounded-full !p-0 !h-0'
+        iconClassName='w-6 h-6'
         icon={images.ic_plus_yellow}
         disabled={value ? value >= max : false}
         onClick={() => increaseValue()}

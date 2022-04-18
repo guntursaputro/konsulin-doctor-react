@@ -7,6 +7,7 @@ interface InputProps {
   label?: string
   placeholder?: string
   type?: string
+  inputClass?: string
   name: string
   value: string | number
   maxLength?: number
@@ -18,6 +19,7 @@ interface InputProps {
 
 export const Input: React.FC<InputProps> = ({
   className,
+  inputClass,
   label,
   placeholder,
   type = 'text',
@@ -72,7 +74,9 @@ export const Input: React.FC<InputProps> = ({
           <input
             className={`appearance-none focus:outline-none w-full rounded-md border border-neutral-20 bg-white focus:border-active ${
               icon ? 'pl-12 pr-3 py-3' : 'p-3'
-            } ${error ? '!border-error' : ''}`}
+            } ${error ? '!border-error' : ''}
+            ${inputClass ? inputClass : ''}
+            `}
             type={type}
             maxLength={maxLength}
             placeholder={placeholder}

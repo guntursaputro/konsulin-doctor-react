@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
+import { isTemplateLiteralTypeSpan } from 'typescript'
 
 interface MenuItem {
   icon: string | null
@@ -21,7 +22,6 @@ export const MenuBottom: React.FC<MenuBottomProps> = ({ menu }) => {
       location.pathname === item.to || location.pathname === item.secondary_to
     )
   }
-
   return (
     <div className='safe-bottom flex items-center fixed bottom-0 w-full max-w-content bg-white top-shadow z-50 -ml-4'>
       {menu.map((item, key) => (
@@ -29,9 +29,14 @@ export const MenuBottom: React.FC<MenuBottomProps> = ({ menu }) => {
           key={key}
           replace={!(item.to === '/scan-qr')}
           to={item.to}
-          className='flex flex-1 items-center justify-center text-xxs'
+          className='flex flex-1 items-center justify-center text-xxs flex-col'
         >
-          <div className='group relative flex flex-col items-center justify-center text-center w-full h-[4rem] '>
+          {isActive(item) ? (
+            <div className='bg-secondary w-9 h-1 top-0 rounded-md absolute'></div>
+          ) : (
+            ''
+          )}
+          <div className='group relative flex flex-col items-center justify-center text-center w-full h-[4rem]'>
             {item.icon && item.icon_active ? (
               <div className='flex items-center justify-center'>
                 <img
