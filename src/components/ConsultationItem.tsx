@@ -19,7 +19,7 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({
 }) => {
   const statusStyle = (status: string) => {
     switch (status) {
-      case 'Online Sekarang':
+      case 'Online':
         return 'bg-primary-base text-white'
       case 'Selesai':
         return 'bg-gray'
@@ -27,6 +27,7 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({
         return 'bg-yellow'
     }
   }
+
   return (
     <div
       className={clsx(
@@ -52,7 +53,7 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({
             item.status
           )}`}
         >
-          {item.status}
+          {item.status === 'Online' ? item.status + ' Sekarang' : item.status}
         </p>
       </div>
       <div className='mx-2 self-start h-4 min-w-fit'>
