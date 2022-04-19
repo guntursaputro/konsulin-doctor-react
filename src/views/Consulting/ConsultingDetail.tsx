@@ -1,6 +1,6 @@
 import images from 'assets/images'
 import { Button } from 'components'
-import { Header } from 'components/Header/Header'
+import { Header } from 'components'
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { CONSULTATION_LIST } from 'utils/dumy'
