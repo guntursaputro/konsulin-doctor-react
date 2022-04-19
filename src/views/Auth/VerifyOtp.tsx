@@ -1,3 +1,4 @@
+import images from 'assets/images'
 import { Header, InputCode, Numpad } from 'components'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -23,18 +24,10 @@ export const VerifyOtp: React.FC = () => {
       <div className='font-semi-bold text-xl mb-3 mt-5'>
         {'Verifikasi Kode OTP '}
       </div>
-      <div className='text-neutral-30 text-sm'>
+      <div className='text-neutral-30 text-sm mb-12'>
         {'Kami Telah Mengirimkan Kode OTP pada'} <br />
         {'Nomor'}
         <span className='font-semi-bold'>{' *********493'}</span>
-      </div>
-
-      <div className='text-center my-8'>
-        <div className='font-bold text-xs mb-2'>{'00:58'}</div>
-        <div className='text-xs mb-2'>{'Tidak Menerima Kode?'}</div>
-        <span className='font-bold text-neutral-20 tex-sm' onClick={resendCode}>
-          {'Kirim Ulang'}
-        </span>
       </div>
 
       <InputCode
@@ -43,6 +36,17 @@ export const VerifyOtp: React.FC = () => {
         value={OTP}
         onComplete={(e) => onSubmit(e)}
       />
+
+      <div className='text-center my-8'>
+        <div className='font-bold text-xs mb-2 flex justify-center'>
+          <img src={images.ic_otp_clock} alt='' className='w-4 h-4 mr-3' />
+          <p>{'00:58'}</p>
+        </div>
+        <div className='text-xs mb-2'>{'Tidak Menerima Kode?'}</div>
+        <span className='font-bold text-neutral-20 tex-sm' onClick={resendCode}>
+          {'Kirim Ulang'}
+        </span>
+      </div>
 
       <Numpad
         className='mx-[15%] my-8'

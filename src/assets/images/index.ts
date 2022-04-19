@@ -35,6 +35,7 @@ import ic_logo_black from './ic_logo_black.png'
 import ic_share from './ic_share.png'
 import ic_search from './ic_search.png'
 import ic_backspace from './ic_backspace.png'
+import ic_otp_clock from './ic_otp_clock.png'
 
 const images = {
   bg_home,
@@ -74,6 +75,7 @@ const images = {
   ic_share,
   ic_search,
   ic_backspace,
+  ic_otp_clock,
 }
 
 export default images
