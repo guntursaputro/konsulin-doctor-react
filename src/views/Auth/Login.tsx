@@ -8,7 +8,7 @@ export const Login: React.FC = () => {
   const navigate = useNavigate()
 
   const onSubmit = () => {
-    navigate('/pasword-input')
+    navigate('/password-input')
   }
 
   return (
