@@ -13,6 +13,7 @@ import {
   ConsultingDetail,
   PasswordInput,
   VerifyOtp,
+  PasswordReset,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -57,6 +58,7 @@ const App: React.FC<Props> = ({ basename }) => {
             <Route path='/login' element={<Login />} />
             <Route path='/password-input' element={<PasswordInput />} />
             <Route path='/verify-otp' element={<VerifyOtp />} />
+            <Route path='/password-reset' element={<PasswordReset />} />
           </Route>
           <Route element={<PrivateRoute />}>
             <Route element={<HomeParent />}>
