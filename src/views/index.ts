@@ -1,6 +1,6 @@
 export { Component } from './Component'
 export { Home } from './Home'
-export { Profil } from './Profil'
+export { Profile } from './Profile'
 export { Consulting } from './Consulting'
 export { HomeParent } from './HomeParent'
 export { Register } from './Auth/Register'
