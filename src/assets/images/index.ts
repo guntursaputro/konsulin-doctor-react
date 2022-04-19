@@ -26,6 +26,14 @@ import ic_home_active from './ic_home_active.png'
 import ic_home_inactive from './ic_home_inactive.png'
 import ic_profile_active from './ic_profile_active.png'
 import ic_profile_inactive from './ic_profile_inactive.png'
+import ic_arrow_back from './ic_arrow_back.png'
+import ic_cart from './ic_cart.png'
+import ic_close from './ic_close.png'
+import ic_filter from './ic_filter.png'
+import ic_history_active from './ic_history_active.png'
+import ic_logo_black from './ic_logo_black.png'
+import ic_share from './ic_share.png'
+import ic_search from './ic_search.png'
 
 const images = {
   bg_home,
@@ -56,6 +64,14 @@ const images = {
   ic_home_inactive,
   ic_profile_active,
   ic_profile_inactive,
+  ic_arrow_back,
+  ic_cart,
+  ic_close,
+  ic_filter,
+  ic_history_active,
+  ic_logo_black,
+  ic_share,
+  ic_search,
 }
 
 export default images

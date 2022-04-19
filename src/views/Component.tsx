@@ -29,7 +29,11 @@ export const Component: React.FC = () => {
     <div className='flex justify-evenly flex-col gap-px'>
       {/* Consultation list */}
       {CONSULTATION_LIST?.map((item, index) => (
-        <ConsultationItem key={index} item={item} />
+        <ConsultationItem
+          key={index}
+          item={item}
+          onClick={() => console.log('click')}
+        />
       ))}
 
       {/* Schedule list */}
