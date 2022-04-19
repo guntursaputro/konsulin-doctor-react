@@ -1,16 +1,18 @@
 import images from 'assets/images'
+import { Button } from 'components'
 import { Header } from 'components/Header/Header'
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { CONSULTATION_LIST } from 'utils/dumy'
 
 export const ConsultingDetail: React.FC = () => {
+  const [isConsultingStart, setIsConsultingStart] = useState(false)
   const navigate = useNavigate()
   const { name } = useParams()
 
-  console.log(
-    CONSULTATION_LIST.filter((item) => item.name === name).map((item) => item)
-  )
+  const onConsultingStart = () => {
+    navigate('/consultingsesion')
+  }
 
   return (
     <>
@@ -42,10 +44,21 @@ export const ConsultingDetail: React.FC = () => {
               </div>
             </div>
             <div className='bg-white px-4 text-center'>
-              <div className='bg-[#eeeeee] py-4 rounded-lg text-sm mb-4'>
-                <p>Konsultasi akan dimulai dalam</p>
-                <p className='font-bold mt-3'>2 Hari 6 Jam</p>
-              </div>
+              {isConsultingStart ? (
+                <Button
+                  onClick={onConsultingStart}
+                  className='btn-primary !w-full mb-4 !text-lg font-semi-bold'
+                  label='Mulai Sesi Konsultasi'
+                />
+              ) : (
+                <div
+                  className='bg-[#eeeeee] py-4 rounded-lg text-sm mb-4'
+                  onClick={() => setIsConsultingStart(true)}
+                >
+                  <p>Konsultasi akan dimulai dalam</p>
+                  <p className='font-bold mt-3'>2 Hari 6 Jam</p>
+                </div>
+              )}
               <p className='text-xs mb-3'>Atau</p>
               <p className='text-base font-bold'>Hubungi CS</p>
             </div>
