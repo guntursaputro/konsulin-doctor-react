@@ -1,8 +1,11 @@
+import images from 'assets/images'
 import { Button, Header, Input } from 'components'
+import { Modal } from 'components'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export const PasswordReset: React.FC = () => {
+  const [showSetting, setShowSetting] = useState(false)
   const navigate = useNavigate()
   const [form, setForm] = useState({
     password: '',
@@ -17,7 +20,8 @@ export const PasswordReset: React.FC = () => {
   }
 
   const onSubmit = () => {
-    navigate('/register')
+    setShowSetting(true)
+    // navigate('/register')
   }
 
   return (
@@ -57,6 +61,20 @@ export const PasswordReset: React.FC = () => {
         label='Submit'
         onClick={onSubmit}
       />
+      <Modal show={showSetting} onHide={() => setShowSetting(false)}>
+        <div className='w-11/12 h-60 bg-white mx-auto rounded-2xl my-auto flex'>
+          <div className='my-auto mx-auto w-52'>
+            <img
+              src={images.ic_shield_success}
+              alt=''
+              className='w-20 h-20 mx-auto'
+            />
+            <p className='text-base font-medium text-[#707070] text-center mt-4'>
+              Password Kamu Berhasil Diperbarui!
+            </p>
+          </div>
+        </div>
+      </Modal>
     </div>
   )
 }
