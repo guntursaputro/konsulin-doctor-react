@@ -12,6 +12,7 @@ import {
   HomeParent,
   ConsultingDetail,
   PasswordInput,
+  VerifyOtp,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -55,6 +56,7 @@ const App: React.FC<Props> = ({ basename }) => {
           <Route element={<ProtectedRoute wrapperContent={false} />}>
             <Route path='/login' element={<Login />} />
             <Route path='/password-input' element={<PasswordInput />} />
+            <Route path='/verify-otp' element={<VerifyOtp />} />
           </Route>
           <Route element={<PrivateRoute />}>
             <Route element={<HomeParent />}>

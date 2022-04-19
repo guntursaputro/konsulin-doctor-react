@@ -35,7 +35,7 @@ export const PasswordInput: React.FC = () => {
         onChange={(e) => setPassword(e.value)}
       />
 
-      <div className='font-bold text-primary-base text=sm text-right pr-3 mb-14 mt-4'>
+      <div className='font-bold text-black-dark text=sm text-right pr-3 mb-14 mt-4'>
         <span onClick={onForgot}>{'Lupa Password'}</span>
       </div>
 
