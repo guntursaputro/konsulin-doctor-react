@@ -45,7 +45,7 @@ export const PRODUCT_LIST = [
 export const SCHEDULE_LIST = [
   {
     status: true,
-    date: 'Senin, 10 Januari 2022',
+    date: 'Senin, 18 April 2022',
     hour: ['10:00 - 11.30', '12.00 - 14.00', '14.30 - 15.30'],
   },
   {
