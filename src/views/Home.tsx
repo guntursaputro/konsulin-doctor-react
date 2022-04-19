@@ -3,9 +3,19 @@ import { Banner, ConsultationItem, ScheduleItem, Switch } from 'components'
 import React, { useState } from 'react'
 import clsx from 'clsx'
 import { CONSULTATION_LIST, SCHEDULE_LIST } from 'utils/dumy'
+import { useNavigate } from 'react-router-dom'
 
 export const Home: React.FC = () => {
   const [isActive, setIsActive] = useState(false)
+  const navigate = useNavigate()
+
+  const onConsultingDetail = (name: string) => {
+    navigate(`/consulting/detail/${name}`)
+  }
+
+  const onAllConsultingClick = () => {
+    navigate('/consulting/online')
+  }
 
   return (
     <div className='-mt-[4rem]'>
@@ -53,12 +63,20 @@ export const Home: React.FC = () => {
             alt=''
             className='w-4 h-4 mr-1'
           />
-          <p className='text-xxs text-black-light'>Lihat Semua</p>
+          <p
+            className='text-xxs text-black-light'
+            onClick={onAllConsultingClick}
+          >
+            Lihat Semua
+          </p>
         </div>
       </div>
       <div>
         {CONSULTATION_LIST?.map((item) => (
-          <ConsultationItem item={item} />
+          <ConsultationItem
+            item={item}
+            onClick={() => onConsultingDetail(item.name)}
+          />
         ))}
       </div>
       <div className='flex  justify-between mb-4'>
