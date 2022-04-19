@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { ConsultingParent, Home, Profil } from 'views'
+import { ConsultingParent, Home, Profile } from 'views'
 import { MenuBottom } from 'components'
 import images from 'assets/images'
 
@@ -35,7 +35,7 @@ export const HomeParent: React.FC = () => {
         <Route element={<ConsultingParent />}>
           <Route path='/consulting/:type' />
         </Route>
-        <Route path='/profile' element={<Profil />} />
+        <Route path='/profile' element={<Profile />} />
       </Routes>
       <MenuBottom menu={menu} />
     </>

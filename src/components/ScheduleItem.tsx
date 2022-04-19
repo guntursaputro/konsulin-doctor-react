@@ -58,7 +58,7 @@ export const ScheduleItem: React.FC<ScheduleItemProps> = ({
       ],
       dayOfMonth = month[day.getMonth()],
       year = day.getFullYear().toString()
-    let today = dayOfWeek + ', ' + date + ' ' + dayOfMonth + ' ' + year
+    let today = `${dayOfWeek}, ${date} ${dayOfMonth} ${year}`
     return today === item.date
   }
 
