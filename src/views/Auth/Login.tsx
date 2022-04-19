@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { InputPhone, Button } from 'components'
 import { useNavigate } from 'react-router-dom'
 
-export const Register: React.FC = () => {
+export const Login: React.FC = () => {
   const [phone, setPhone] = useState('')
   const navigate = useNavigate()
 
