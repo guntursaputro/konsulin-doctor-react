@@ -14,7 +14,7 @@ const menu = [
   {
     icon: images.ic_consulting_inactive,
     icon_active: images.ic_consulting_active,
-    title: 'ConsultingParent',
+    title: 'Konsultasi',
     to: '/consulting/online',
     secondary_to: '/consulting/terjadwal',
     third_to: '/consulting/selesai',
