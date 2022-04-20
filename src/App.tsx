@@ -55,8 +55,6 @@ const App: React.FC<Props> = ({ basename }) => {
               <Route path='/consulting/:type' />
               <Route path='/profile' />
             </Route>
-          </Route>
-          <Route element={<PrivateRoute wrapperContent={false} />}>
             <Route
               path='/consulting/detail/:name'
               element={<ConsultingDetail />}

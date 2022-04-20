@@ -17,12 +17,10 @@ export const ConsultingDetail: React.FC = () => {
   return (
     <>
       {CONSULTATION_LIST.filter((item) => item.name === name).map((item) => (
-        <div className='content-full bg-white flex flex-col'>
-          <div className='ml-4'>
-            <Header label='Konsultasi' onBackClick={() => navigate(-1)} />
-          </div>
-          <div className='mt-[4rem]'>
-            <div className='flex w-full justify-between p-4 bg-'>
+        <div className='-mt-4 -mx-4 p-4 h-full !bg-white'>
+          <Header label='Konsultasi' onBackClick={() => navigate(-1)} />
+          <div className='-mt-5'>
+            <div className='flex -mx-4 justify-between p-4 bg-gradient-to-b from-[#dedede] to-[#eee]'>
               <img
                 src={item.image ? item.image : images.ic_user}
                 alt=''
@@ -34,7 +32,7 @@ export const ConsultingDetail: React.FC = () => {
               </div>
               <img src={images.ic_dots} alt='' className='w-5 h-5' />
             </div>
-            <div className='bg-white py-4'>
+            <div className='bg-white py-4 -mx-4'>
               <div className='mx-4 text-xs'>
                 <p className='font-bold mb-2'>Tanggal Pemesanan</p>
                 <p className='mb-4'>11 Januari 2022</p>
@@ -43,7 +41,7 @@ export const ConsultingDetail: React.FC = () => {
                 <p className='mb-2'>Sesi {item.hour}</p>
               </div>
             </div>
-            <div className='bg-white px-4 text-center'>
+            <div className='bg-white px-4 -mx-4 text-center'>
               {isConsultingStart ? (
                 <Button
                   onClick={onConsultingStart}
