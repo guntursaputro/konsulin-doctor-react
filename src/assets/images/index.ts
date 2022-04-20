@@ -1,4 +1,5 @@
 import bg_home from './bg_home.png'
+import bg_profile from './bg_profile.png'
 import ic_user from './ic_user.png'
 import ic_dots from './ic_dots.png'
 import ic_thumb from './ic_thumb.png'
@@ -37,6 +38,15 @@ import ic_search from './ic_search.png'
 import ic_backspace from './ic_backspace.png'
 import ic_otp_clock from './ic_otp_clock.png'
 import ic_shield_success from './ic_shield_success.png'
+import ic_profile_dummy from './ic_profile_dummy.png'
+import ic_setting from './ic_setting.png'
+import ic_help from './ic_help.png'
+import ic_faq from './ic_faq.png'
+import ic_privacy from './ic_privacy.png'
+import ic_profile_circle from './ic_profile_circle.png'
+import ic_logout from './ic_logout.png'
+import ic_shield_profile from './ic_shield_profile.png'
+import ic_notification_profile from './ic_notification_profile.png'
 
 const images = {
   bg_home,
@@ -78,6 +88,16 @@ const images = {
   ic_backspace,
   ic_otp_clock,
   ic_shield_success,
+  bg_profile,
+  ic_setting,
+  ic_profile_dummy,
+  ic_faq,
+  ic_profile_circle,
+  ic_help,
+  ic_privacy,
+  ic_logout,
+  ic_shield_profile,
+  ic_notification_profile,
 }
 
 export default images
