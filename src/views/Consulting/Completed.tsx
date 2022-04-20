@@ -3,7 +3,7 @@ import { CONSULTATION_LIST } from 'utils/dumy'
 import { ConsultationItem } from 'components'
 import { useNavigate } from 'react-router-dom'
 
-export const Selesai: React.FC = () => {
+export const Completed: React.FC = () => {
   const navigate = useNavigate()
 
   const onConsultingDetail = (name: string) => {

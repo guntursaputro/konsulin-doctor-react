@@ -6,12 +6,12 @@ export const TABS_CONSULTING = [
   },
   {
     title: 'Terjadwal',
-    key: 'terjadwal',
-    to: '/consulting/terjadwal',
+    key: 'scheduled',
+    to: '/consulting/scheduled',
   },
   {
     title: 'Selesai',
-    key: 'selesai',
-    to: '/consulting/selesai',
+    key: 'completed',
+    to: '/consulting/completed',
   },
 ]
