@@ -3,7 +3,8 @@ import { Tabs } from 'components/Tabs'
 import { TABS_CONSULTING } from 'config/menu'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Online, Selesai, Terjadwal } from 'views'
+import { Online, Scheduled } from 'views'
+import { Completed } from './Completed'
 
 export const ConsultingParent: React.FC = () => {
   return (
@@ -14,8 +15,8 @@ export const ConsultingParent: React.FC = () => {
       </div>
       <Routes>
         <Route path='/consulting/online' element={<Online />} />
-        <Route path='/consulting/selesai' element={<Selesai />} />
-        <Route path='/consulting/terjadwal' element={<Terjadwal />} />
+        <Route path='/consulting/completed' element={<Completed />} />
+        <Route path='/consulting/scheduled' element={<Scheduled />} />
       </Routes>
     </div>
   )

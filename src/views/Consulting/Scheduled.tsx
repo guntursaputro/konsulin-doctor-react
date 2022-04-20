@@ -3,7 +3,7 @@ import { CONSULTATION_LIST } from 'utils/dumy'
 import { ConsultationItem } from 'components'
 import { useNavigate } from 'react-router-dom'
 
-export const Terjadwal: React.FC = () => {
+export const Scheduled: React.FC = () => {
   const navigate = useNavigate()
 
   const onConsultingDetail = (name: string) => {

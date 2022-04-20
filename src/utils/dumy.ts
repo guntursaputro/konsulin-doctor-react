@@ -3,7 +3,8 @@ export const CONSULTATION_LIST = [
     name: 'Guntur Saputro',
     date: '14 Januari 2022',
     hour: '09:30',
-    status: '2 hari 8 jam',
+    status: 'Terjadwal',
+    startTime: '2 Hari 8 Jam',
   },
   {
     image: 'https://placekitten.com/400',
@@ -24,7 +25,8 @@ export const CONSULTATION_LIST = [
     name: 'Diego Costa',
     date: '28 Maret 2022',
     hour: '17:30',
-    status: '1 hari 1 jam',
+    status: 'Terjadwal',
+    startTime: '1 hari 1 jam',
   },
 ]
 

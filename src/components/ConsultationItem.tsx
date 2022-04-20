@@ -10,6 +10,7 @@ interface ConsultationItemProps {
     date: string
     hour: string
     status: string
+    startTime?: string
   }
   onClick: (e: any) => void
 }
@@ -25,7 +26,7 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({
         return 'bg-primary-base text-white'
       case 'Selesai':
         return 'bg-gray'
-      default:
+      case 'Terjadwal':
         return 'bg-yellow'
     }
   }
@@ -48,7 +49,7 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({
       <div className='flex flex-col grow gap-y-2 shrink'>
         <p className='font-bold text-sm'>{item.name}</p>
         <span className='flex gap-5'>
-          <p className='text-xs'>{item.date}</p>
+          <p className='text-xs w-24'>{item.date}</p>
           <p className='text-xs'>Jam {item.hour}</p>
         </span>
         <p
@@ -56,7 +57,11 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({
             item.status
           )}`}
         >
-          {item.status === 'Online' ? item.status + ' Sekarang' : item.status}
+          {item.status === 'Terjadwal'
+            ? item.startTime
+            : item.status === 'Online'
+            ? item.status + ' Sekarang'
+            : item.status}
         </p>
       </div>
       <div className='mx-2 self-start h-4 min-w-fit'>
