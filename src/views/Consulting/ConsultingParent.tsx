@@ -3,8 +3,7 @@ import { Tabs } from 'components/Tabs'
 import { TABS_CONSULTING } from 'config/menu'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Online, Scheduled } from 'views'
-import { Completed } from './Completed'
+import { Online, Scheduled, Completed } from 'views'
 
 export const ConsultingParent: React.FC = () => {
   return (
