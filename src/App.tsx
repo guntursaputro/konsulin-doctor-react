@@ -6,7 +6,7 @@ import {
   Route,
   Routes,
 } from 'react-router-dom'
-import { Component, Register, HomeParent } from 'views'
+import { Component, Register, HomeParent, ConsultingDetail } from 'views'
 import { isLogin } from 'utils/auth'
 
 type Props = {
@@ -52,9 +52,13 @@ const App: React.FC<Props> = ({ basename }) => {
           <Route element={<PrivateRoute />}>
             <Route element={<HomeParent />}>
               <Route path='/home' />
+              <Route path='/consulting/:type' />
               <Route path='/profile' />
-              <Route path='/consulting' />
             </Route>
+            <Route
+              path='/consulting/detail/:name'
+              element={<ConsultingDetail />}
+            />
           </Route>
           <Route element={<ProtectedRoute />}>
             <Route path='/component' element={<Component />} />

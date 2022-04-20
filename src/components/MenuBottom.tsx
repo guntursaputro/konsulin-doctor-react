@@ -7,6 +7,7 @@ interface MenuItem {
   title: string
   to: string
   secondary_to?: string | null
+  third_to?: string | null
 }
 
 interface MenuBottomProps {
@@ -18,9 +19,12 @@ export const MenuBottom: React.FC<MenuBottomProps> = ({ menu }) => {
 
   const isActive = (item: MenuItem) => {
     return (
-      location.pathname === item.to || location.pathname === item.secondary_to
+      location.pathname === item.to ||
+      location.pathname === item.secondary_to ||
+      location.pathname === item.third_to
     )
   }
+
   return (
     <div className='safe-bottom flex items-center fixed bottom-0 w-full max-w-content bg-white top-shadow z-50 -ml-4'>
       {menu.map((item, key) => (
