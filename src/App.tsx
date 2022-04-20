@@ -14,6 +14,7 @@ import {
   PasswordInput,
   VerifyOtp,
   PasswordReset,
+  PersonalInfo,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -70,6 +71,7 @@ const App: React.FC<Props> = ({ basename }) => {
               path='/consulting/detail/:name'
               element={<ConsultingDetail />}
             />
+            <Route path='/personal-info' element={<PersonalInfo />} />
           </Route>
           <Route element={<ProtectedRoute />}>
             <Route path='/component' element={<Component />} />

@@ -47,6 +47,8 @@ import ic_profile_circle from './ic_profile_circle.png'
 import ic_logout from './ic_logout.png'
 import ic_shield_profile from './ic_shield_profile.png'
 import ic_notification_profile from './ic_notification_profile.png'
+import ic_arrow_profile from './ic_arrow_profile.png'
+import bg_profile_dummy from './bg_profile_dummy.png'
 
 const images = {
   bg_home,
@@ -98,6 +100,8 @@ const images = {
   ic_logout,
   ic_shield_profile,
   ic_notification_profile,
+  ic_arrow_profile,
+  bg_profile_dummy,
 }
 
 export default images
