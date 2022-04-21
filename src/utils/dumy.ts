@@ -109,3 +109,31 @@ export const SUMMARY_LIST = [
     summary: 'Bercak merah di area hidung',
   },
 ]
+
+export const FAQ_LIST = [
+  {
+    question: 'Bagaimana cara membatalkan jadwal konsultasi?',
+    answer:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+  {
+    question: 'Bagaimana cara mengubah jadwal konsultasi',
+    answer:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+  {
+    question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit?',
+    answer:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+  {
+    question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit?',
+    answer:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+  {
+    question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit?',
+    answer:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+]
