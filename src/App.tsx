@@ -16,6 +16,7 @@ import {
   PasswordReset,
   PersonalInfo,
   Faq,
+  PrivacyPolicy,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -74,6 +75,7 @@ const App: React.FC<Props> = ({ basename }) => {
             />
             <Route path='/personal-info' element={<PersonalInfo />} />
             <Route path='/faq' element={<Faq />} />
+            <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           </Route>
           <Route element={<ProtectedRoute />}>
             <Route path='/component' element={<Component />} />
