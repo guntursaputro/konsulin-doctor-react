@@ -45,7 +45,7 @@ export const MENU_PROFILE = [
     to: '/faq',
   },
   {
-    label: 'Help',
+    label: 'Bantuan',
     icon: images.ic_help,
     to: '/help',
   },
