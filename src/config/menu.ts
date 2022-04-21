@@ -45,7 +45,7 @@ export const MENU_PROFILE = [
   {
     label: 'Atur Jadwal',
     icon: images.ic_calender,
-    to: '/set-schedule',
+    to: '/schedule/online-schedule',
   },
   {
     label: 'Kebijakan Privasi',
