@@ -44,7 +44,7 @@ export const PersonalInfo: React.FC = () => {
           <p className='font-bold mt-5'>No. STR</p>
           <p>00212232200032</p>
           <Button
-            onClick={() => console.log('click')}
+            onClick={() => navigate('/profile-change')}
             label='Ajukan Perubahan Data'
             className='btn-primary !w-full mt-20'
           />

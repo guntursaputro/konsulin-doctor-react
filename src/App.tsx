@@ -18,6 +18,7 @@ import {
   Faq,
   PrivacyPolicy,
   Help,
+  ProfileChange,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -75,6 +76,7 @@ const App: React.FC<Props> = ({ basename }) => {
               element={<ConsultingDetail />}
             />
             <Route path='/personal-info' element={<PersonalInfo />} />
+            <Route path='/profile-change' element={<ProfileChange />} />
             <Route path='/faq' element={<Faq />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/help' element={<Help />} />

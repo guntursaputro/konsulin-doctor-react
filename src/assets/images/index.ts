@@ -49,6 +49,7 @@ import ic_shield_profile from './ic_shield_profile.png'
 import ic_notification_profile from './ic_notification_profile.png'
 import ic_arrow_profile from './ic_arrow_profile.png'
 import bg_profile_dummy from './bg_profile_dummy.png'
+import ic_down from './ic_down.png'
 
 const images = {
   bg_home,
@@ -102,6 +103,7 @@ const images = {
   ic_notification_profile,
   ic_arrow_profile,
   bg_profile_dummy,
+  ic_down,
 }
 
 export default images
