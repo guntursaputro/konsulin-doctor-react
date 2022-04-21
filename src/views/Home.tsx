@@ -17,6 +17,10 @@ export const Home: React.FC = () => {
     navigate('/consulting/online')
   }
 
+  const onSetScheduleClick = () => {
+    navigate('/schedule/online-schedule')
+  }
+
   return (
     <div className='-mt-[4rem]'>
       <Banner />
@@ -83,7 +87,9 @@ export const Home: React.FC = () => {
         <p className='font-semi-bold text-xs'>JADWAL</p>
         <div className='flex'>
           <img src={images.ic_calender} alt='' className='w-4 h-4 mr-1' />
-          <p className='text-xxs text-black-light'>Atur Jadwal</p>
+          <p className='text-xxs text-black-light' onClick={onSetScheduleClick}>
+            Atur Jadwal
+          </p>
         </div>
       </div>
       <div>
