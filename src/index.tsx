@@ -1,16 +1,15 @@
-import axios from 'axios';
-import 'bootstrap';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'styles/index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import * as setup from './setup';
+import axios from 'axios'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import 'styles/index.scss'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import * as setup from './setup'
 
-// public url 
+// public url
 const { PUBLIC_URL } = process.env
 
-// setting axios 
+// setting axios
 setup.setupAxios(axios)
 
 ReactDOM.render(
@@ -18,6 +17,6 @@ ReactDOM.render(
     <App basename={PUBLIC_URL} />
   </React.StrictMode>,
   document.getElementById('root')
-);
+)
 
-reportWebVitals();
+reportWebVitals()

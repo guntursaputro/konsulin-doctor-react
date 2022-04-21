@@ -1,5 +1,21 @@
 import React, { lazy, Suspense } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import {
+  BrowserRouter,
+  Navigate,
+  Outlet,
+  Route,
+  Routes,
+} from 'react-router-dom'
+import {
+  Component,
+  Login,
+  HomeParent,
+  ConsultingDetail,
+  PasswordInput,
+  VerifyOtp,
+  PasswordReset,
+} from 'views'
+import { isLogin } from 'utils/auth'
 
 type Props = {
   basename: string
@@ -8,14 +24,57 @@ type Props = {
 const Home = lazy(() => import('views/Home'))
 
 const App: React.FC<Props> = ({ basename }) => {
+  const PrivateRoute = ({ wrapperContent = true }) => {
+    if (isLogin()) {
+      return <Navigate to='/' replace />
+    }
+    return wrapperContent ? (
+      <div className='content' id='content'>
+        <Outlet />
+      </div>
+    ) : (
+      <Outlet />
+    )
+  }
+
+  const ProtectedRoute = ({ wrapperContent = true }) => {
+    if (isLogin()) {
+      return <Navigate to='/home' replace />
+    }
+    return wrapperContent ? (
+      <div className='content' id='content'>
+        <Outlet />
+      </div>
+    ) : (
+      <Outlet />
+    )
+  }
+
   return (
     <Suspense fallback={() => 'loading ....'}>
       <BrowserRouter basename={basename}>
-        <div className='content' id='content'>
-          <Routes>
-            <Route path='/' element={<Home />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route element={<ProtectedRoute wrapperContent={false} />}>
+            <Route path='/login' element={<Login />} />
+            <Route path='/password-input' element={<PasswordInput />} />
+            <Route path='/verify-otp' element={<VerifyOtp />} />
+            <Route path='/password-reset' element={<PasswordReset />} />
+          </Route>
+          <Route element={<PrivateRoute />}>
+            <Route element={<HomeParent />}>
+              <Route path='/home' />
+              <Route path='/consulting/:type' />
+              <Route path='/profile' />
+            </Route>
+            <Route
+              path='/consulting/detail/:name'
+              element={<ConsultingDetail />}
+            />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path='/component' element={<Component />} />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </Suspense>
   )
