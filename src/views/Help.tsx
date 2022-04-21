@@ -1,3 +1,4 @@
+import images from 'assets/images'
 import { Button, Header, Input } from 'components'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -28,14 +29,13 @@ export const Help: React.FC = () => {
           {'Apa Yang Bisa Kami Bantu?'}
         </div>
 
-        <select
-          className='p-3 bg-white focus:outline-none w-full rounded-md border mb-7'
-          onChange={handleChangeForm}
-          name='subject'
-        >
-          <option value={form?.subject}>Pilih Kategori Bantuan</option>
-          <option value={form?.subject}>Option2</option>
-        </select>
+        <div>
+          <p>Data Yang Hendak Diubah</p>
+          <div className='bg-white rounded-md text-sm p-3 outline outline-1 flex justify-between items-center my-3'>
+            <p>Pilih kategori bantuan</p>
+            <img src={images.ic_down} alt='' className='h-5 w-5' />
+          </div>
+        </div>
 
         <Input
           className='mb-7'
