@@ -61,6 +61,7 @@ import ic_resep_inactive from './ic_resep_inactive.png'
 import ic_resep_active from './ic_resep_active.png'
 import ic_chat_active from './ic_chat_active.png'
 import ic_chat_inactive from './ic_chat_inactive.png'
+import ic_video_cam from './ic_video_cam.png'
 
 const images = {
   bg_home,
@@ -126,6 +127,7 @@ const images = {
   ic_resep_inactive,
   ic_chat_inactive,
   ic_chat_active,
+  ic_video_cam,
 }
 
 export default images

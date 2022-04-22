@@ -8,6 +8,12 @@ import {
   RecipeSesion,
 } from 'views'
 import { SESION_MENU } from 'config/menu'
+import images from 'assets/images'
+
+export const HEADER_ICON = [
+  { icon: images.ic_video_cam },
+  { icon: images.ic_dots },
+]
 
 export const ConsultingSesionParent: React.FC = () => {
   const navigate = useNavigate()
@@ -21,9 +27,28 @@ export const ConsultingSesionParent: React.FC = () => {
     if (type) return type === key
   }
 
+  // const checkPage = () => {
+  //   if (type === 'chat' || type === 'recommendation') {
+  //     HEADER_ICON.shift()
+  //     return HEADER_ICON
+  //   }
+  // }
+
+  console.log(HEADER_ICON[1])
+
   return (
     <div>
-      <Header onBackClick={() => navigate(-1)} label='Guntur Saputro' />
+      <Header
+        onBackClick={() => navigate(-1)}
+        label='Guntur Saputro'
+        profile={images.ic_user}
+        icon={
+          type === 'chat' || type === 'recommendation'
+            ? HEADER_ICON
+            : [{ icon: images.ic_dots }]
+        }
+        iconClassName='w-6 h-6'
+      />
       <div className='scroll-x !space-x-2 snap-x snap-mandatory py-3 -mx-4 -mt-5'>
         {SESION_MENU?.map((item) => (
           <div

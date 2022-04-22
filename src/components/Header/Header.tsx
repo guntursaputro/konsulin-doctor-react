@@ -2,6 +2,10 @@ import images from 'assets/images'
 import React from 'react'
 import './Header.scss'
 
+// interface iconItems {
+//   icon: string
+// }
+
 interface HeaderPropss {
   label?: string
   onCloseClick?: (e: any) => void
@@ -13,6 +17,9 @@ interface HeaderPropss {
   onFilterClick?: (e: any) => void
   onSecondarySearchClick?: (e: any) => void
   hasInbox?: boolean
+  profile?: string
+  icon?: { icon: string }[]
+  iconClassName?: string
 }
 
 export const Header: React.FC<HeaderPropss> = ({
@@ -26,7 +33,11 @@ export const Header: React.FC<HeaderPropss> = ({
   onFilterClick,
   onSecondarySearchClick,
   hasInbox,
+  profile,
+  icon,
+  iconClassName,
 }) => {
+  console.log(icon)
   return (
     <div className='component__header h-[60px] max-h-[60px] bg-white max-w-content fixed top-0 w-full flex flex-col justify-center z-50 px-4 py-2 -ml-4'>
       <div className='safe-top flex items-center justify-between'>
@@ -48,9 +59,20 @@ export const Header: React.FC<HeaderPropss> = ({
           />
         )}
 
+        {profile && <img src={profile} className='h-8 w-8 mr-3' alt='' />}
+
         {label && (
           <div className='flex-1 truncate font-semi-bold pr-3'>{label}</div>
         )}
+
+        {icon &&
+          icon?.map((item) => (
+            <img
+              src={item.icon}
+              alt=''
+              className={`mx-1.5 ,${iconClassName}`}
+            />
+          ))}
 
         {onSearchClick && (
           <div
