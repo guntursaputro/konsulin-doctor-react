@@ -21,6 +21,7 @@ import {
   ProfileChange,
 } from 'views'
 import { isLogin } from 'utils/auth'
+import { SetScheduleParent } from 'views/SetSchedule/SetScheduleParent'
 
 type Props = {
   basename: string
@@ -80,6 +81,9 @@ const App: React.FC<Props> = ({ basename }) => {
             <Route path='/faq' element={<Faq />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/help' element={<Help />} />
+            <Route element={<SetScheduleParent />}>
+              <Route path='/schedule/:type' />
+            </Route>
           </Route>
           <Route element={<ProtectedRoute />}>
             <Route path='/component' element={<Component />} />

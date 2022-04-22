@@ -18,6 +18,19 @@ export const TABS_CONSULTING = [
   },
 ]
 
+export const TABS_SCHEDULE = [
+  {
+    title: 'Jadwal Online',
+    key: 'online-schedule',
+    to: '/schedule/online-schedule',
+  },
+  {
+    title: 'Pengaturan',
+    key: 'set-schedule',
+    to: '/schedule/set-schedule',
+  },
+]
+
 export const MENU_PROFILE = [
   {
     label: 'Personal Info',
@@ -32,7 +45,7 @@ export const MENU_PROFILE = [
   {
     label: 'Atur Jadwal',
     icon: images.ic_calender,
-    to: '/set-schedule',
+    to: '/schedule/online-schedule',
   },
   {
     label: 'Kebijakan Privasi',
