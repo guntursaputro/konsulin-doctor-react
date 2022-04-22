@@ -63,3 +63,34 @@ export const MENU_PROFILE = [
     to: '/help',
   },
 ]
+
+export const SESION_MENU = [
+  {
+    label: 'Chat',
+    icon: images.ic_chat_active,
+    icon_inactive: images.ic_chat_inactive,
+    to: '/consulting-sesion/chat',
+    isSelected: true,
+  },
+  {
+    label: 'Summary',
+    icon: images.ic_summary_active,
+    icon_inactive: images.ic_summary_inactive,
+    to: '/consulting-sesion/summary',
+    isSelected: false,
+  },
+  {
+    label: 'Rek. Produk',
+    icon: images.ic_rekomendasi_active,
+    icon_inactive: images.ic_rekomendasi_inactive,
+    to: '/consulting-sesion/recomendation',
+    isSelected: false,
+  },
+  {
+    label: 'Resep Obat',
+    icon: images.ic_resep_active,
+    icon_inactive: images.ic_resep_inactive,
+    to: '/consulting-sesion/recipe',
+    isSelected: false,
+  },
+]

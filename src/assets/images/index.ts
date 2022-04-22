@@ -53,6 +53,14 @@ import ic_down from './ic_down.png'
 import ic_disket from './ic_disket.png'
 import ic_power_black from './ic_power_black.png'
 import ic_power_white from './ic_power_white.png'
+import ic_summary_active from './ic_summary_active.png'
+import ic_summary_inactive from './ic_summary_inactive.png'
+import ic_rekomendasi_active from './ic_rekomendasi_active.png'
+import ic_rekomendasi_inactive from './ic_rekomendasi_inactive.png'
+import ic_resep_inactive from './ic_resep_inactive.png'
+import ic_resep_active from './ic_resep_active.png'
+import ic_chat_active from './ic_chat_active.png'
+import ic_chat_inactive from './ic_chat_inactive.png'
 
 const images = {
   bg_home,
@@ -110,6 +118,14 @@ const images = {
   ic_disket,
   ic_power_black,
   ic_power_white,
+  ic_summary_inactive,
+  ic_summary_active,
+  ic_rekomendasi_inactive,
+  ic_rekomendasi_active,
+  ic_resep_active,
+  ic_resep_inactive,
+  ic_chat_inactive,
+  ic_chat_active,
 }
 
 export default images
