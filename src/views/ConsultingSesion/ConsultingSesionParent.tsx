@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from 'components'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Route, Routes, useNavigate, useParams } from 'react-router-dom'
 import {
   ChatSesion,
   SummarySesion,
@@ -11,26 +11,35 @@ import { SESION_MENU } from 'config/menu'
 
 export const ConsultingSesionParent: React.FC = () => {
   const navigate = useNavigate()
+  const { type } = useParams()
 
   const onSesionMenuClick = (to: string) => {
     navigate(to)
+  }
+
+  const isActive = (key: string) => {
+    if (type) return type === key
   }
 
   return (
     <div>
       <Header onBackClick={() => navigate(-1)} label='Guntur Saputro' />
       <div className='scroll-x !space-x-2 snap-x snap-mandatory py-3 -mx-4 -mt-5'>
-        {SESION_MENU.map((item, index) => (
+        {SESION_MENU?.map((item) => (
           <div
-            key={index}
+            key={item.key}
             className={`text-sm px-4 py-2 flex items-center min-w-fit rounded-md ${
-              item.isSelected
+              isActive(item.key)
                 ? 'bg-primary-base text-white'
                 : 'border border-neutral-30'
             }`}
             onClick={() => onSesionMenuClick(item.to)}
           >
-            <img src={item.icon} alt='' className='h-4 mr-1' />
+            <img
+              src={isActive(item.key) ? item.icon_inactive : item.icon}
+              alt=''
+              className='h-4 mr-1'
+            />
             <p className='text-xxs'>{item.label}</p>
           </div>
         ))}
