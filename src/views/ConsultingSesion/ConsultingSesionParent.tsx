@@ -27,15 +27,6 @@ export const ConsultingSesionParent: React.FC = () => {
     if (type) return type === key
   }
 
-  // const checkPage = () => {
-  //   if (type === 'chat' || type === 'recommendation') {
-  //     HEADER_ICON.shift()
-  //     return HEADER_ICON
-  //   }
-  // }
-
-  console.log(HEADER_ICON[1])
-
   return (
     <div>
       <Header
