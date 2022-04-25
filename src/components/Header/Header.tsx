@@ -37,7 +37,6 @@ export const Header: React.FC<HeaderPropss> = ({
   icon,
   iconClassName,
 }) => {
-  console.log(icon)
   return (
     <div className='component__header h-[60px] max-h-[60px] bg-white max-w-content fixed top-0 w-full flex flex-col justify-center z-50 px-4 py-2 -ml-4'>
       <div className='safe-top flex items-center justify-between'>
