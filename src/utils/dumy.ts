@@ -39,6 +39,8 @@ export const PRODUCT_LIST = [
     store: 'Bening official store',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, soluta!',
+    amount: 1,
+    note: 'Pakai 2x sehari, pagi dan sebelum tidur sesudah cuci muka',
   },
   {
     image: 'https://placekitten.com/800',
@@ -48,6 +50,8 @@ export const PRODUCT_LIST = [
     store: 'Ayu Shop',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, soluta, Lorem ipsum dolor sit amet consectetur adipisicing elit!',
+    amount: 2,
+    note: '',
   },
 ]
 
