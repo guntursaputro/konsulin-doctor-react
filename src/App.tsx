@@ -19,6 +19,7 @@ import {
   PrivacyPolicy,
   Help,
   ProfileChange,
+  ConsultingSesionParent,
 } from 'views'
 import { isLogin } from 'utils/auth'
 import { SetScheduleParent } from 'views/SetSchedule/SetScheduleParent'
@@ -83,6 +84,9 @@ const App: React.FC<Props> = ({ basename }) => {
             <Route path='/help' element={<Help />} />
             <Route element={<SetScheduleParent />}>
               <Route path='/schedule/:type' />
+            </Route>
+            <Route element={<ConsultingSesionParent />}>
+              <Route path='/consulting-sesion/:type' />
             </Route>
           </Route>
           <Route element={<ProtectedRoute />}>
