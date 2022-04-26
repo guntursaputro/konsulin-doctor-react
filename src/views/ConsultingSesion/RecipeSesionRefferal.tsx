@@ -26,7 +26,7 @@ export const RecipeSesionRefferal: React.FC = () => {
       </div>
       <div className='px-4'>
         <Button
-          className='bg-yellow text-white !w-full drop-shadow-md mt-3'
+          className='bg-yellow text-white !w-full drop-shadow-md mt-3 text-xs'
           label='Tambah Rekomendasi'
           icon={images.ic_plus_white}
           onClick={onAddRecipe}
@@ -37,13 +37,15 @@ export const RecipeSesionRefferal: React.FC = () => {
           <MedicineItem item={item} />
         ))}
       </div>
-      <Button
-        icon={images.ic_edit}
-        className='btn-outline mt-4 absolute right-0 mr-4 text-xxs'
-        onClick={() => console.log('Change')}
-        label='Ubah Rekomendasi'
-      />
-      <div className='mx-4 mt-24 -mb-16'>
+      <div className='mt-6'>
+        <Button
+          icon={images.ic_edit}
+          className='btn-outline absolute right-0 mr-4 text-xxs'
+          onClick={() => console.log('Change')}
+          label='Ubah Rekomendasi'
+        />
+      </div>
+      <div className='mx-4 mt-32 -mb-16'>
         <Button
           icon={images.ic_send_white}
           label='Kirim Rekomendasi ke Pasien'

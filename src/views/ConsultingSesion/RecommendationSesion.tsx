@@ -19,7 +19,7 @@ export const RecommendationSesion: React.FC = () => {
     <div className='-mx-4 bg-white'>
       <div className='pt-3 px-4'>
         <Button
-          className='bg-yellow text-white !w-full drop-shadow-md'
+          className='bg-yellow text-white !w-full drop-shadow-md text-xs'
           label='Tambah Rekomendasi'
           icon={images.ic_plus_white}
           onClick={onAddRecomendation}
@@ -42,7 +42,7 @@ export const RecommendationSesion: React.FC = () => {
       </div>
       <Button
         icon={images.ic_edit}
-        className='btn-outline mt-8 absolute right-0 mr-5'
+        className='btn-outline mt-8 absolute right-0 mr-5 text-xxs'
         onClick={onChangeRecommendation}
         label='Ubah Rekomendasi'
       />
