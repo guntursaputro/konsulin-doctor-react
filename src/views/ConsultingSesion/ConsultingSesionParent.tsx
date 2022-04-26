@@ -5,7 +5,7 @@ import {
   ChatSesion,
   SummarySesion,
   RecommendationSesion,
-  RecipeSesion,
+  RecipeSesionRefferal,
 } from 'views'
 import { SESION_MENU } from 'config/menu'
 import images from 'assets/images'
@@ -67,7 +67,10 @@ export const ConsultingSesionParent: React.FC = () => {
           path='/consulting-sesion/recommendation'
           element={<RecommendationSesion />}
         />
-        <Route path='/consulting-sesion/recipe' element={<RecipeSesion />} />
+        <Route
+          path='/consulting-sesion/recipe'
+          element={<RecipeSesionRefferal />}
+        />
       </Routes>
     </div>
   )

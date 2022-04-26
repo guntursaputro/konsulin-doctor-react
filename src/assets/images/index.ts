@@ -62,6 +62,11 @@ import ic_resep_active from './ic_resep_active.png'
 import ic_chat_active from './ic_chat_active.png'
 import ic_chat_inactive from './ic_chat_inactive.png'
 import ic_video_cam from './ic_video_cam.png'
+import ic_booklet_black from './ic_booklet_black.png'
+import ic_send_white from './ic_send_white.png'
+import ic_edit from './ic_edit.png'
+import ic_attach_black from './ic_attach_black.png'
+import ic_send_black from './ic_send_black.png'
 
 const images = {
   bg_home,
@@ -128,6 +133,11 @@ const images = {
   ic_chat_inactive,
   ic_chat_active,
   ic_video_cam,
+  ic_booklet_black,
+  ic_send_white,
+  ic_edit,
+  ic_attach_black,
+  ic_send_black,
 }
 
 export default images
