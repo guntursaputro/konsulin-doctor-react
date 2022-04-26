@@ -8,7 +8,7 @@ export const RecommendationSesion: React.FC = () => {
   const navigate = useNavigate()
 
   const onAddRecomendation = () => {
-    navigate('/add-recomendation')
+    navigate('/add-recommendation')
   }
 
   return (
