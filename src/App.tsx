@@ -23,6 +23,7 @@ import {
   SetScheduleParent,
   AddRecommendation,
   ChangeRecommendation,
+  AddRecipe,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -89,6 +90,7 @@ const App: React.FC<Props> = ({ basename }) => {
               path='/change-recommendation'
               element={<ChangeRecommendation />}
             />
+            <Route path='/add-recipe' element={<AddRecipe />} />
             <Route element={<SetScheduleParent />}>
               <Route path='/schedule/:type' />
             </Route>
