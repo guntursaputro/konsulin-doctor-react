@@ -26,7 +26,7 @@ export const RecipeSesionRefferal: React.FC = () => {
       </div>
       <div className='px-4'>
         <Button
-          className='bg-yellow text-white !w-full drop-shadow-md mt-3'
+          className='bg-yellow text-white !w-full drop-shadow-md mt-3 text-xs'
           label='Tambah Rekomendasi'
           icon={images.ic_plus_white}
           onClick={onAddRecipe}

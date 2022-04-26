@@ -15,7 +15,7 @@ export const RecommendationSesion: React.FC = () => {
     <div className='-mx-4 bg-white'>
       <div className='pt-3 px-4'>
         <Button
-          className='bg-yellow text-white !w-full drop-shadow-md'
+          className='bg-yellow text-white !w-full drop-shadow-md text-xs'
           label='Tambah Rekomendasi'
           icon={images.ic_plus_white}
           onClick={onAddRecomendation}
