@@ -54,7 +54,7 @@ export const MedicineItem: React.FC<MedicineItemProps> = ({
             <div>
               <Button
                 className='btn-outline text-xs !h-[40px] !w-56'
-                label='+ Masukan Rekomendasi'
+                label='+ Masukan Resep'
                 onClick={onSubmit}
               />
             </div>
