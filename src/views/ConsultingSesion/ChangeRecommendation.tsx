@@ -22,7 +22,7 @@ export const ChangeRecommendation: React.FC = () => {
       </div>
       <div className='-mx-4 bg-white px-4'>
         {PRODUCT_LIST?.map((item) => (
-          <ProductItem item={item} active />
+          <ProductItem item={item} active deletable />
         ))}
       </div>
       <div className='bg-white -mx-4 px-4 pb-16 py-9 -mb-16'>
