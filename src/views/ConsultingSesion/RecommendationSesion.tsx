@@ -23,7 +23,7 @@ export const RecommendationSesion: React.FC = () => {
         <p className='text-neutral-30 font-semi-bold text-xs'>
           REKOMENDASI PRODUK
         </p>
-        <div className='flex font-bold text-xxs justify-between border-b-[2px] border-b-gray'>
+        <div className='flex font-bold text-xxs justify-between border-b-[2px] border-b-gray mt-4'>
           <p>Produk</p>
           <p>Jumlah</p>
         </div>
