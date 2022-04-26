@@ -12,14 +12,16 @@ export const RecommendationSesion: React.FC = () => {
   }
 
   return (
-    <div>
-      <Button
-        className='bg-yellow text-white !w-full drop-shadow-md mt-3'
-        label='Tambah Rekomendasi'
-        icon={images.ic_plus_white}
-        onClick={onAddRecomendation}
-      />
-      <div className='mt-6'>
+    <div className='-mx-4 bg-white'>
+      <div className='pt-3 px-4'>
+        <Button
+          className='bg-yellow text-white !w-full drop-shadow-md'
+          label='Tambah Rekomendasi'
+          icon={images.ic_plus_white}
+          onClick={onAddRecomendation}
+        />
+      </div>
+      <div className='mt-6 px-4'>
         <p className='text-neutral-30 font-semi-bold text-xs'>
           REKOMENDASI PRODUK
         </p>
@@ -39,12 +41,14 @@ export const RecommendationSesion: React.FC = () => {
         onClick={() => console.log('Change')}
         label='Ubah Rekomendasi'
       />
-      <Button
-        icon={images.ic_send_white}
-        label='Kirim Rekomendasi ke Pasien'
-        onClick={() => console.log('send')}
-        className='btn-primary !w-full mt-20'
-      />
+      <div className='mx-4 mt-28'>
+        <Button
+          icon={images.ic_send_white}
+          label='Kirim Rekomendasi ke Pasien'
+          onClick={() => console.log('send')}
+          className='btn-primary !w-full'
+        />
+      </div>
     </div>
   )
 }
