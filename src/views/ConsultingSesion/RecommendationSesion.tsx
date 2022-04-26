@@ -46,7 +46,7 @@ export const RecommendationSesion: React.FC = () => {
         onClick={onChangeRecommendation}
         label='Ubah Rekomendasi'
       />
-      <div className='mx-4 mt-24 -mb-16'>
+      <div className='mx-4 mt-32 -mb-16'>
         <Button
           icon={images.ic_send_white}
           label='Kirim Rekomendasi ke Pasien'
