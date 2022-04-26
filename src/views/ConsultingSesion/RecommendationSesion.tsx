@@ -11,6 +11,10 @@ export const RecommendationSesion: React.FC = () => {
     navigate('/add-recommendation')
   }
 
+  const onChangeRecommendation = () => {
+    navigate('/change-recommendation')
+  }
+
   return (
     <div>
       <Button
@@ -36,7 +40,7 @@ export const RecommendationSesion: React.FC = () => {
       <Button
         icon={images.ic_edit}
         className='btn-outline mt-4 absolute right-0 mr-4'
-        onClick={() => console.log('Change')}
+        onClick={onChangeRecommendation}
         label='Ubah Rekomendasi'
       />
       <Button
