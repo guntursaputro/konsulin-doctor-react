@@ -10,8 +10,8 @@ export const RecipeSesionRefferal: React.FC = () => {
     navigate('/add-recipe')
   }
   return (
-    <div>
-      <div className='mt-6 w-'>
+    <div className='bg-white -mx-4'>
+      <div className='pt-6 px-4'>
         <p className='text-black-lighter text-xs font-semi-bold border-b-[2px] border-b-gray'>
           KLINIK REFFERAL
         </p>
@@ -24,29 +24,33 @@ export const RecipeSesionRefferal: React.FC = () => {
           Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12730
         </p>
       </div>
-      <Button
-        className='bg-yellow text-white !w-full drop-shadow-md mt-3'
-        label='Tambah Rekomendasi'
-        icon={images.ic_plus_white}
-        onClick={onAddRecipe}
-      />
-      <div>
+      <div className='px-4'>
+        <Button
+          className='bg-yellow text-white !w-full drop-shadow-md mt-3'
+          label='Tambah Rekomendasi'
+          icon={images.ic_plus_white}
+          onClick={onAddRecipe}
+        />
+      </div>
+      <div className='px-4'>
         {MEDICINE_LIST?.map((item) => (
           <MedicineItem item={item} />
         ))}
       </div>
       <Button
         icon={images.ic_edit}
-        className='btn-outline mt-4 absolute right-0 mr-4'
+        className='btn-outline mt-4 absolute right-0 mr-4 text-xxs'
         onClick={() => console.log('Change')}
         label='Ubah Rekomendasi'
       />
-      <Button
-        icon={images.ic_send_white}
-        label='Kirim Rekomendasi ke Pasien'
-        onClick={() => console.log('send')}
-        className='btn-primary !w-full mt-40'
-      />
+      <div className='mx-4 mt-24 -mb-16'>
+        <Button
+          icon={images.ic_send_white}
+          label='Kirim Rekomendasi ke Pasien'
+          onClick={() => console.log('send')}
+          className='btn-primary !w-full !text-xs'
+        />
+      </div>
     </div>
   )
 }
