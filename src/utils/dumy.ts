@@ -90,15 +90,24 @@ export const COMMENT_LIST = [
 ]
 export const MEDICINE_LIST = [
   {
+    image: 'https://placekitten.com/500',
     name: 'Betametason 100-mg',
-    price: 25000,
+    price: 5000,
     amount: 1,
+    rate: 5,
+    store: 'Bening official store',
+    description: 'Deskripsi singkat',
     note: 'Oleskan tipis pada alergi bila terasa gatal',
   },
   {
+    image: 'https://placekitten.com/300',
     name: 'Antithistamin-8 strip',
     price: 125000,
-    amount: 4,
+    amount: 2,
+    rate: 5,
+    store: 'Bening official store',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, soluta!',
     note: 'Minum 3 kali sehari sesudah makan',
   },
 ]
