@@ -25,6 +25,22 @@ export const RecipeSesionWithoutRefferal: React.FC = () => {
           <MedicineRefferalItem item={item} disabled className='!pb-0' />
         ))}
       </div>
+      <div className='mt-6'>
+        <Button
+          icon={images.ic_edit}
+          className='btn-outline absolute right-0 mr-4 text-xxs'
+          onClick={() => console.log('Change')}
+          label='Ubah Rekomendasi'
+        />
+      </div>
+      <div className='mx-4 mt-32'>
+        <Button
+          icon={images.ic_send_white}
+          label='Kirim Rekomendasi ke Pasien'
+          onClick={() => console.log('send')}
+          className='btn-primary !w-full !text-xs'
+        />
+      </div>
     </div>
   )
 }
