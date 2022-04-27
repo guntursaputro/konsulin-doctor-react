@@ -9,6 +9,7 @@ interface PlusMinusProps {
   max?: number
   min?: number
   isLimited?: boolean
+  disabled?: boolean
   onChange: (e: any) => void
 }
 
@@ -18,6 +19,7 @@ export const PlusMinus: React.FC<PlusMinusProps> = ({
   max = 999,
   min = 0,
   isLimited,
+  disabled,
   onChange,
 }) => {
   const [sValue, setValue] = useState<number | null>()
@@ -77,9 +79,9 @@ export const PlusMinus: React.FC<PlusMinusProps> = ({
       <Button
         className='rounded-full !p-0 h-0'
         iconClassName='w-6 h-6'
-        icon={images.ic_minus_white}
+        icon={disabled ? images.ic_minus_grey : images.ic_minus_white}
         disabled={value ? value <= min : false}
-        onClick={() => decreaseValue()}
+        onClick={disabled ? () => void 0 : () => decreaseValue()}
       />
       <input
         className='appearance-none focus:outline-none w-8 text-center rounded border border-neutral-20 text-sm py-px'
@@ -91,9 +93,9 @@ export const PlusMinus: React.FC<PlusMinusProps> = ({
       <Button
         className='rounded-full !p-0 !h-0'
         iconClassName='w-6 h-6'
-        icon={images.ic_plus_yellow}
+        icon={disabled ? images.ic_plus_grey : images.ic_plus_yellow}
         disabled={value ? value >= max : false}
-        onClick={() => increaseValue()}
+        onClick={disabled ? () => void 0 : () => increaseValue()}
       />
     </div>
   )
