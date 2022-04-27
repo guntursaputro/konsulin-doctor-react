@@ -22,12 +22,12 @@ export const AddRecipe: React.FC = () => {
           className='w-6 pr-1 mt-3 self-end'
         />
       </div>
-      <div className='flex font-bold text-xxs justify-between mx-4 px-4 bg-white'>
+      <div className='flex font-bold text-xxs justify-between mx-4 bg-white'>
         <p>OBAT</p>
         <p>HARGA</p>
       </div>
-      <div className='border-b-[2px] border-b-gray mx-8'></div>
-      <div className='mx-4 px-4 bg-white mt-6 '>
+      <div className='border-b-[2px] border-b-gray mx-4'></div>
+      <div className='mx-4 bg-white mt-6 '>
         {MEDICINE_LIST?.map((item) => (
           <MedicineItem item={item} active />
         ))}
