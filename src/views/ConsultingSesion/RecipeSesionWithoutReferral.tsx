@@ -4,7 +4,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MEDICINE_LIST } from 'utils/dumy'
 
-export const RecipeSesionWithoutRefferal: React.FC = () => {
+export const RecipeSesionWithoutReferral: React.FC = () => {
   const navigate = useNavigate()
   const onAddRecomendation = () => {
     navigate('/add-recipe-without-refferal')

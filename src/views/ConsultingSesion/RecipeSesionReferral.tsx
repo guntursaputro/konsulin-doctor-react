@@ -4,7 +4,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MEDICINE_LIST } from 'utils/dumy'
 
-export const RecipeSesionRefferal: React.FC = () => {
+export const RecipeSesionReferral: React.FC = () => {
   const navigate = useNavigate()
   const onAddRecipe = () => {
     navigate('/add-recipe')
