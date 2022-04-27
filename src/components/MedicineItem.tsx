@@ -8,7 +8,16 @@ import { PlusMinus } from './PlusMinus'
 
 interface MedicineItemProps {
   className?: string
-  item: { name: string; amount: number; price: number; note: string }
+  item: {
+    name: string
+    amount: number
+    price: number
+    rate: number
+    note: string
+    store: string
+    description: string
+    image?: string
+  }
   active?: boolean
 }
 
@@ -43,8 +52,7 @@ export const MedicineItem: React.FC<MedicineItemProps> = ({
               {numberSeparator(item.price, 'Rp.')}
             </p>
           </div>
-
-          <div className='flex my-4 justify-between  items-center'>
+          <div className='flex mt-2 mb-4 justify-between items-center'>
             <PlusMinus
               onChange={(e) => setCount(e)}
               value={count}
