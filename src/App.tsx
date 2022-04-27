@@ -93,7 +93,7 @@ const App: React.FC<Props> = ({ basename }) => {
             />
             <Route path='/add-recipe' element={<AddRecipe />} />
             <Route
-              path='/add-recipe-without-refferal'
+              path='/add-recipe-without-referral'
               element={<AddRecipeWithoutReferral />}
             />
             <Route element={<SetScheduleParent />}>
