@@ -9,6 +9,7 @@ import {
 } from 'views'
 import { SESION_MENU } from 'config/menu'
 import images from 'assets/images'
+import { RecipeSesionWithoutRefferal } from './RecipeSesionWithoutRefferal'
 
 export const HEADER_ICON = [
   { icon: images.ic_video_cam },
@@ -70,6 +71,10 @@ export const ConsultingSesionParent: React.FC = () => {
         <Route
           path='/consulting-sesion/recipe'
           element={<RecipeSesionRefferal />}
+        />
+        <Route
+          path='/consulting-sesion/recipe-without-refferal'
+          element={<RecipeSesionWithoutRefferal />}
         />
       </Routes>
     </div>
