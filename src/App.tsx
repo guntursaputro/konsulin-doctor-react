@@ -24,7 +24,7 @@ import {
   AddRecommendation,
   ChangeRecommendation,
   AddRecipe,
-  AddRecipeWithoutRefferal,
+  AddRecipeWithoutReferral,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -94,7 +94,7 @@ const App: React.FC<Props> = ({ basename }) => {
             <Route path='/add-recipe' element={<AddRecipe />} />
             <Route
               path='/add-recipe-without-refferal'
-              element={<AddRecipeWithoutRefferal />}
+              element={<AddRecipeWithoutReferral />}
             />
             <Route element={<SetScheduleParent />}>
               <Route path='/schedule/:type' />
