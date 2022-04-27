@@ -6,10 +6,10 @@ import {
   SummarySesion,
   RecommendationSesion,
   RecipeSesionRefferal,
+  RecipeSesionWithoutRefferal,
 } from 'views'
 import { SESION_MENU } from 'config/menu'
 import images from 'assets/images'
-import { RecipeSesionWithoutRefferal } from './RecipeSesionWithoutRefferal'
 
 export const HEADER_ICON = [
   { icon: images.ic_video_cam },
