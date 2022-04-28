@@ -6,7 +6,7 @@ import { Button } from './Button/Button'
 import { Input } from './Input'
 import { PlusMinus } from './PlusMinus'
 
-interface MedicineRefferalItemProps {
+interface MedicineReferralItemProps {
   className?: string
   active?: boolean
   disabled?: boolean
@@ -22,7 +22,7 @@ interface MedicineRefferalItemProps {
   }
 }
 
-export const MedicineRefferalItem: React.FC<MedicineRefferalItemProps> = ({
+export const MedicineReferralItem: React.FC<MedicineReferralItemProps> = ({
   className,
   active,
   disabled,

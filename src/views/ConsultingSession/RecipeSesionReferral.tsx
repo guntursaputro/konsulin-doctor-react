@@ -4,7 +4,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MEDICINE_LIST } from 'utils/dumy'
 
-export const RecipeSesionReferral: React.FC = () => {
+export const RecipeSessionReferral: React.FC = () => {
   const navigate = useNavigate()
   const onAddRecipe = () => {
     navigate('/add-recipe')
@@ -16,7 +16,7 @@ export const RecipeSesionReferral: React.FC = () => {
     <div className='bg-white -mx-4'>
       <div className='pt-6 px-4'>
         <p className='text-black-lighter text-xs font-semi-bold border-b-[2px] border-b-gray'>
-          KLINIK REFFERAL
+          KLINIK REFERRAL
         </p>
         <p className='font-semi-bold text-xs mt-2'>#BNG001-JK</p>
         <p className='font-semi-bold text-xs my-2'>
