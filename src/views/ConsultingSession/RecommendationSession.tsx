@@ -4,7 +4,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { PRODUCT_LIST } from 'utils/dumy'
 
-export const RecommendationSesion: React.FC = () => {
+export const RecommendationSession: React.FC = () => {
   const navigate = useNavigate()
 
   const onAddRecomendation = () => {
