@@ -19,17 +19,9 @@ export { ProfileChange } from './ProfileChange'
 export { OnlineSchedule } from './SetSchedule/OnlineSchedule'
 export { SetSchedule } from './SetSchedule/SetSchedule'
 export { SetScheduleParent } from './SetSchedule/SetScheduleParent'
-<<<<<<< HEAD
-export { ConsultingSesionParent } from './ConsultingSesion/ConsultingSesionParent'
-export { ChatSesion } from './ConsultingSesion/ChatSesion'
-export { RecommendationSesion } from './ConsultingSesion/RecommendationSesion'
-export { RecipeSesionRefferal } from './ConsultingSesion/RecipeSesionRefferal'
-export { SummarySesion } from './ConsultingSesion/SummarySesion'
-export { AddRecommendation } from './ConsultingSesion/AddRecommendation'
-=======
 export { ConsultingSessionParent } from './ConsultingSession/ConsultingSessionParent'
 export { ChatSession } from './ConsultingSession/ChatSession'
 export { RecommendationSession } from './ConsultingSession/RecommendationSession'
 export { RecipeSessionReferral } from './ConsultingSession/RecipeSessionReferral'
 export { SummarySession } from './ConsultingSession/SummarySession'
->>>>>>> dev_consultingsesion_page
+export { AddRecommendation } from './ConsultingSession/AddRecommendation'

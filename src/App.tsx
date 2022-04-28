@@ -19,14 +19,9 @@ import {
   PrivacyPolicy,
   Help,
   ProfileChange,
-<<<<<<< HEAD
-  ConsultingSesionParent,
-  SetScheduleParent,
-  AddRecommendation,
-=======
   ConsultingSessionParent,
   SetScheduleParent,
->>>>>>> dev_consultingsesion_page
+  AddRecommendation,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
