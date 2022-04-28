@@ -1,5 +1,5 @@
 import images from 'assets/images'
-import { Button, Header, MedicineReferralItem } from 'components'
+import { Button, Header, MedicineNoReferralItem } from 'components'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MEDICINE_LIST } from 'utils/dumy'
@@ -24,7 +24,7 @@ export const AddRecipeWithoutReferral: React.FC = () => {
       </div>
       <div className='mx-4'>
         {MEDICINE_LIST?.map((item) => (
-          <MedicineReferralItem item={item} active />
+          <MedicineNoReferralItem item={item} active />
         ))}
       </div>
       <div className='pb-16 -mb-16 px-4 bg-white'>

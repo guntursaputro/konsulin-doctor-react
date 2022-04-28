@@ -19,7 +19,7 @@ export const ChangeRecipe: React.FC = () => {
       <div className='mx-4 bg-white'>
         <div className='bg-white'>
           {MEDICINE_LIST?.map((item) => (
-            <MedicineItem item={item} active />
+            <MedicineItem item={item} active deleted />
           ))}
         </div>
         <div className='-mx-4 px-4 bg-white'>
