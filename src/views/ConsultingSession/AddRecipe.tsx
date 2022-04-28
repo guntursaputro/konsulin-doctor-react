@@ -11,7 +11,7 @@ export const AddRecipe: React.FC = () => {
       <div className='mx-4'>
         <Header onBackClick={() => navigate(-1)} label='Tambah Resep' />
       </div>
-      <div className=' bg-white p-4 flex flex-col'>
+      <div className='bg-white p-4 flex flex-col'>
         <div className='w-full py-2 px-3 text-xs flex justify-between border rounded-md items-center'>
           <p>Facial Wash</p>
           <img src={images.ic_search_loop} alt='' className='w-6 h-6' />

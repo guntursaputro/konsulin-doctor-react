@@ -19,14 +19,14 @@ interface ProductItemProps {
     note?: string
   }
   active?: boolean
-  deletable?: boolean
+  deleted?: boolean
 }
 
 export const ProductItem: React.FC<ProductItemProps> = ({
   className,
   item,
   active,
-  deletable,
+  deleted,
 }) => {
   const [isActive, setIsActive] = useState(false)
   const [form, setForm] = useState('')
@@ -89,7 +89,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({
               max={20}
             />
             <div>
-              {deletable ? (
+              {deleted ? (
                 <Button
                   onClick={() => console.log('delete')}
                   icon={images.ic_trash}

@@ -6,7 +6,7 @@ import { Button } from './Button/Button'
 import { Input } from './Input'
 import { PlusMinus } from './PlusMinus'
 
-interface MedicineRefferalItemProps {
+interface MedicineReferralItemProps {
   className?: string
   active?: boolean
   disabled?: boolean
@@ -22,7 +22,7 @@ interface MedicineRefferalItemProps {
   }
 }
 
-export const MedicineRefferalItem: React.FC<MedicineRefferalItemProps> = ({
+export const MedicineReferralItem: React.FC<MedicineReferralItemProps> = ({
   className,
   active,
   disabled,
@@ -83,10 +83,14 @@ export const MedicineRefferalItem: React.FC<MedicineRefferalItemProps> = ({
         </div>
       </div>
 
-      <div className='text-xxs mt-3'>
-        <p className='mb-1'>Catatan Dokter:</p>
-        <p>{item.note}</p>
-      </div>
+      {active ? (
+        ''
+      ) : (
+        <div className='text-xxs mt-3'>
+          <p className='mb-1'>Catatan Dokter:</p>
+          <p>{item.note}</p>
+        </div>
+      )}
 
       <div className='flex justify-between items-center'>
         <PlusMinus
@@ -100,7 +104,7 @@ export const MedicineRefferalItem: React.FC<MedicineRefferalItemProps> = ({
         {active ? (
           <div>
             <Button
-              className='btn-outline text-xs !h-[40px] !w-56'
+              className='btn-outline text-xs !h-[40px] !w-56 mt-5'
               label='+ Masukan Resep'
               onClick={onSubmit}
             />
