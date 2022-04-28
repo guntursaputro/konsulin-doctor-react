@@ -2,7 +2,7 @@ import images from 'assets/images'
 import { Button, Input } from 'components'
 import React, { useState } from 'react'
 
-export const ChatSesion: React.FC = () => {
+export const ChatSession: React.FC = () => {
   const [form, setForm] = useState({
     name: '',
   })

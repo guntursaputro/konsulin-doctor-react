@@ -19,10 +19,10 @@ import {
   PrivacyPolicy,
   Help,
   ProfileChange,
-  ConsultingSesionParent,
+  ConsultingSessionParent,
+  SetScheduleParent,
 } from 'views'
 import { isLogin } from 'utils/auth'
-import { SetScheduleParent } from 'views/SetSchedule/SetScheduleParent'
 
 type Props = {
   basename: string
@@ -85,7 +85,7 @@ const App: React.FC<Props> = ({ basename }) => {
             <Route element={<SetScheduleParent />}>
               <Route path='/schedule/:type' />
             </Route>
-            <Route element={<ConsultingSesionParent />}>
+            <Route element={<ConsultingSessionParent />}>
               <Route path='/consulting-sesion/:type' />
             </Route>
           </Route>

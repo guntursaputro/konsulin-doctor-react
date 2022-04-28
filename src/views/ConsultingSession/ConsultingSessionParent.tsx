@@ -2,10 +2,10 @@ import React from 'react'
 import { Header } from 'components'
 import { Route, Routes, useNavigate, useParams } from 'react-router-dom'
 import {
-  ChatSesion,
-  SummarySesion,
-  RecommendationSesion,
-  RecipeSesionRefferal,
+  ChatSession,
+  SummarySession,
+  RecommendationSession,
+  RecipeSessionReferral,
 } from 'views'
 import { SESION_MENU } from 'config/menu'
 import images from 'assets/images'
@@ -15,7 +15,7 @@ export const HEADER_ICON = [
   { icon: images.ic_dots },
 ]
 
-export const ConsultingSesionParent: React.FC = () => {
+export const ConsultingSessionParent: React.FC = () => {
   const navigate = useNavigate()
   const { type } = useParams()
 
@@ -61,15 +61,15 @@ export const ConsultingSesionParent: React.FC = () => {
         ))}
       </div>
       <Routes>
-        <Route path='/consulting-sesion/chat' element={<ChatSesion />} />
-        <Route path='/consulting-sesion/summary' element={<SummarySesion />} />
+        <Route path='/consulting-sesion/chat' element={<ChatSession />} />
+        <Route path='/consulting-sesion/summary' element={<SummarySession />} />
         <Route
           path='/consulting-sesion/recommendation'
-          element={<RecommendationSesion />}
+          element={<RecommendationSession />}
         />
         <Route
           path='/consulting-sesion/recipe'
-          element={<RecipeSesionRefferal />}
+          element={<RecipeSessionReferral />}
         />
       </Routes>
     </div>
