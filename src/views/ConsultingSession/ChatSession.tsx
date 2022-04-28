@@ -2,7 +2,7 @@ import images from 'assets/images'
 import { Button, Input } from 'components'
 import React, { useState } from 'react'
 
-export const ChatSesion: React.FC = () => {
+export const ChatSession: React.FC = () => {
   const [form, setForm] = useState({
     name: '',
   })
@@ -28,7 +28,7 @@ export const ChatSesion: React.FC = () => {
       </div>
 
       <div className='scroll-y !space-y-4 snap-y snap-mandatory max-h-[80vh]'>
-        <div className='bg-[#eeeeee] w-3/4 mx-4 p-2 rounded-lg text-xxs flex flex-col float-left'>
+        <div className='bg-gray w-3/4 mx-4 p-2 rounded-lg text-xxs flex flex-col float-left'>
           <p className='mb-1 self-end'>19:01</p>
           <p>
             Hai Selamat datang, silahkan konsultasikan permasalahan kamu, baik
@@ -36,7 +36,7 @@ export const ChatSesion: React.FC = () => {
           </p>
         </div>
 
-        <div className='bg-[#ebd2df] w-3/4 mx-4 p-2 rounded-lg text-xxs flex flex-col float-right'>
+        <div className='bg-pink w-3/4 mx-4 p-2 rounded-lg text-xxs flex flex-col float-right'>
           <p className='mb-1 self-end'>19:01</p>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
@@ -46,7 +46,7 @@ export const ChatSesion: React.FC = () => {
         </div>
 
         <div
-          className={`bg-[#ebd2df] max-h-fit w-3/4 mx-4 my-2 p-2 rounded-lg text-xxs flex flex-col float-right relative after:content-['_'] 
+          className={`bg-pink max-h-fit w-3/4 mx-4 my-2 p-2 rounded-lg text-xxs flex flex-col float-right relative after:content-['_'] 
           after:absolute after:block after:w-0 after:z-[1]  after:border-solid after:border-t-[21px] after:border-l-[24px] after:border-r-0  after:text-transparent after:border-b-0 after:border-l-[#ebd2df]
           after:bottom-0 after:-right-[12px] after:-mt-[10px]`}
         >
@@ -55,8 +55,8 @@ export const ChatSesion: React.FC = () => {
         </div>
 
         <div
-          className={`bg-[#eee] max-h-fit w-3/4 mx-4 my-2 p-2 rounded-lg text-xxs flex flex-col float-left relative after:content-['_'] 
-          before:absolute before:block before:w-0 before:z-[1]  before:border-solid before:border-r-[21px] before:border-b-[24px] before:border-t-0  before:text-transparent before:border-l-0 before:border-r-[#eee]
+          className={`bg-gray max-h-fit w-3/4 mx-4 my-2 p-2 rounded-lg text-xxs flex flex-col float-left relative after:content-['_'] 
+          before:absolute before:block before:w-0 before:z-[1]  before:border-solid before:border-r-[21px] before:border-b-[24px] before:border-t-0  before:text-transparent before:border-l-0 before:border-r-gray
           before:top-0 before:-left-[12px]`}
         >
           <p className='mb-1 self-end'>19:01</p>
