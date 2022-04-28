@@ -53,6 +53,20 @@ import ic_down from './ic_down.png'
 import ic_disket from './ic_disket.png'
 import ic_power_black from './ic_power_black.png'
 import ic_power_white from './ic_power_white.png'
+import ic_summary_active from './ic_summary_active.png'
+import ic_summary_inactive from './ic_summary_inactive.png'
+import ic_rekomendasi_active from './ic_rekomendasi_active.png'
+import ic_rekomendasi_inactive from './ic_rekomendasi_inactive.png'
+import ic_resep_inactive from './ic_resep_inactive.png'
+import ic_resep_active from './ic_resep_active.png'
+import ic_chat_active from './ic_chat_active.png'
+import ic_chat_inactive from './ic_chat_inactive.png'
+import ic_video_cam from './ic_video_cam.png'
+import ic_booklet_black from './ic_booklet_black.png'
+import ic_send_white from './ic_send_white.png'
+import ic_edit from './ic_edit.png'
+import ic_attach_black from './ic_attach_black.png'
+import ic_send_black from './ic_send_black.png'
 
 const images = {
   bg_home,
@@ -110,6 +124,20 @@ const images = {
   ic_disket,
   ic_power_black,
   ic_power_white,
+  ic_summary_inactive,
+  ic_summary_active,
+  ic_rekomendasi_inactive,
+  ic_rekomendasi_active,
+  ic_resep_active,
+  ic_resep_inactive,
+  ic_chat_inactive,
+  ic_chat_active,
+  ic_video_cam,
+  ic_booklet_black,
+  ic_send_white,
+  ic_edit,
+  ic_attach_black,
+  ic_send_black,
 }
 
 export default images
