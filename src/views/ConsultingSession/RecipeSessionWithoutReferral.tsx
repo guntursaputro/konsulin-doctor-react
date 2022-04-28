@@ -29,7 +29,7 @@ export const RecipeSessionWithoutReferral: React.FC = () => {
         <Button
           icon={images.ic_edit}
           className='btn-outline absolute right-0 mr-4 text-xxs'
-          onClick={() => console.log('Change')}
+          onClick={() => navigate('/change-recipe-without-referral')}
           label='Ubah Rekomendasi'
         />
       </div>

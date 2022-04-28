@@ -20,6 +20,7 @@ interface MedicineNoReferralItemProps {
     description: string
     image?: string
   }
+  edited?: boolean
 }
 
 export const MedicineNoReferralItem: React.FC<MedicineNoReferralItemProps> = ({
@@ -27,6 +28,7 @@ export const MedicineNoReferralItem: React.FC<MedicineNoReferralItemProps> = ({
   active,
   disabled,
   item,
+  edited,
 }) => {
   const [isActive, setIsActive] = useState(false)
   const [form, setForm] = useState('')
@@ -92,7 +94,11 @@ export const MedicineNoReferralItem: React.FC<MedicineNoReferralItemProps> = ({
         </div>
       )}
 
-      <div className='flex justify-between items-center'>
+      <div
+        className={`flex justify-between items-center ${
+          edited ? '' : 'my - 4'
+        }`}
+      >
         <PlusMinus
           onChange={(e) => setCount(e)}
           value={count}
@@ -103,11 +109,20 @@ export const MedicineNoReferralItem: React.FC<MedicineNoReferralItemProps> = ({
 
         {active ? (
           <div>
-            <Button
-              className='btn-outline text-xs !h-[40px] !w-56 mt-5'
-              label='+ Masukan Resep'
-              onClick={onSubmit}
-            />
+            {edited ? (
+              <Button
+                onClick={() => console.log('delete')}
+                icon={images.ic_trash}
+                className='h6- w-6 text-xs !font-regular'
+                label='Hapus'
+              />
+            ) : (
+              <Button
+                className='btn-outline text-xs !h-[40px] !w-56'
+                label='+ Masukan Resep'
+                onClick={onSubmit}
+              />
+            )}
           </div>
         ) : (
           ''
