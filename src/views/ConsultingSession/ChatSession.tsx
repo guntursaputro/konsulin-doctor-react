@@ -56,7 +56,7 @@ export const ChatSession: React.FC = () => {
 
         <div
           className={`bg-gray max-h-fit w-3/4 mx-4 my-2 p-2 rounded-lg text-xxs flex flex-col float-left relative after:content-['_'] 
-          before:absolute before:block before:w-0 before:z-[1]  before:border-solid before:border-r-[21px] before:border-b-[24px] before:border-t-0  before:text-transparent before:border-l-0 before:border-r-[#eee]
+          before:absolute before:block before:w-0 before:z-[1]  before:border-solid before:border-r-[21px] before:border-b-[24px] before:border-t-0  before:text-transparent before:border-l-0 before:border-r-gray
           before:top-0 before:-left-[12px]`}
         >
           <p className='mb-1 self-end'>19:01</p>

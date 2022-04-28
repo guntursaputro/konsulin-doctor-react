@@ -20,7 +20,7 @@ export const ConsultingSessionParent: React.FC = () => {
   const { type } = useParams()
 
   const onSesionMenuClick = (to: string) => {
-    navigate(to)
+    navigate(to, {replace:true})
   }
 
   const isActive = (key: string) => {
