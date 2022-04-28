@@ -11,7 +11,7 @@ export const ConsultingDetail: React.FC = () => {
   const { name } = useParams()
 
   const onConsultingStart = () => {
-    navigate('/consultingsesion')
+    navigate('/consulting-sesion/chat')
   }
 
   return (

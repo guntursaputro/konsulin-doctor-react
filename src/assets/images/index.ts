@@ -1,4 +1,5 @@
 import bg_home from './bg_home.png'
+import bg_profile from './bg_profile.png'
 import ic_user from './ic_user.png'
 import ic_dots from './ic_dots.png'
 import ic_thumb from './ic_thumb.png'
@@ -37,6 +38,35 @@ import ic_search from './ic_search.png'
 import ic_backspace from './ic_backspace.png'
 import ic_otp_clock from './ic_otp_clock.png'
 import ic_shield_success from './ic_shield_success.png'
+import ic_profile_dummy from './ic_profile_dummy.png'
+import ic_setting from './ic_setting.png'
+import ic_help from './ic_help.png'
+import ic_faq from './ic_faq.png'
+import ic_privacy from './ic_privacy.png'
+import ic_profile_circle from './ic_profile_circle.png'
+import ic_logout from './ic_logout.png'
+import ic_shield_profile from './ic_shield_profile.png'
+import ic_notification_profile from './ic_notification_profile.png'
+import ic_arrow_profile from './ic_arrow_profile.png'
+import bg_profile_dummy from './bg_profile_dummy.png'
+import ic_down from './ic_down.png'
+import ic_disket from './ic_disket.png'
+import ic_power_black from './ic_power_black.png'
+import ic_power_white from './ic_power_white.png'
+import ic_summary_active from './ic_summary_active.png'
+import ic_summary_inactive from './ic_summary_inactive.png'
+import ic_rekomendasi_active from './ic_rekomendasi_active.png'
+import ic_rekomendasi_inactive from './ic_rekomendasi_inactive.png'
+import ic_resep_inactive from './ic_resep_inactive.png'
+import ic_resep_active from './ic_resep_active.png'
+import ic_chat_active from './ic_chat_active.png'
+import ic_chat_inactive from './ic_chat_inactive.png'
+import ic_video_cam from './ic_video_cam.png'
+import ic_booklet_black from './ic_booklet_black.png'
+import ic_send_white from './ic_send_white.png'
+import ic_edit from './ic_edit.png'
+import ic_attach_black from './ic_attach_black.png'
+import ic_send_black from './ic_send_black.png'
 
 const images = {
   bg_home,
@@ -78,6 +108,36 @@ const images = {
   ic_backspace,
   ic_otp_clock,
   ic_shield_success,
+  bg_profile,
+  ic_setting,
+  ic_profile_dummy,
+  ic_faq,
+  ic_profile_circle,
+  ic_help,
+  ic_privacy,
+  ic_logout,
+  ic_shield_profile,
+  ic_notification_profile,
+  ic_arrow_profile,
+  bg_profile_dummy,
+  ic_down,
+  ic_disket,
+  ic_power_black,
+  ic_power_white,
+  ic_summary_inactive,
+  ic_summary_active,
+  ic_rekomendasi_inactive,
+  ic_rekomendasi_active,
+  ic_resep_active,
+  ic_resep_inactive,
+  ic_chat_inactive,
+  ic_chat_active,
+  ic_video_cam,
+  ic_booklet_black,
+  ic_send_white,
+  ic_edit,
+  ic_attach_black,
+  ic_send_black,
 }
 
 export default images

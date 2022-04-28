@@ -106,7 +106,7 @@ export const Component: React.FC = () => {
 
       {/* Product list */}
       {PRODUCT_LIST?.map((item, index) => (
-        <ProductItem item={item} key={index} />
+        <ProductItem item={item} key={index} active />
       ))}
 
       {COMMENT_LIST?.map((item, index) => (

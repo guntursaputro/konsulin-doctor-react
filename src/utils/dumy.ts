@@ -39,6 +39,8 @@ export const PRODUCT_LIST = [
     store: 'Bening official store',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, soluta!',
+    amount: 1,
+    note: 'Pakai 2x sehari, pagi dan sebelum tidur sesudah cuci muka',
   },
   {
     image: 'https://placekitten.com/800',
@@ -48,6 +50,8 @@ export const PRODUCT_LIST = [
     store: 'Ayu Shop',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, soluta, Lorem ipsum dolor sit amet consectetur adipisicing elit!',
+    amount: 2,
+    note: '',
   },
 ]
 
@@ -107,5 +111,33 @@ export const SUMMARY_LIST = [
   {
     id: 2,
     summary: 'Bercak merah di area hidung',
+  },
+]
+
+export const FAQ_LIST = [
+  {
+    question: 'Bagaimana cara membatalkan jadwal konsultasi?',
+    answer:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+  {
+    question: 'Bagaimana cara mengubah jadwal konsultasi',
+    answer:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+  {
+    question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit?',
+    answer:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+  {
+    question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit?',
+    answer:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+  {
+    question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit?',
+    answer:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
   },
 ]
