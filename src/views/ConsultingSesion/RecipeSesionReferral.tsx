@@ -9,6 +9,9 @@ export const RecipeSesionReferral: React.FC = () => {
   const onAddRecipe = () => {
     navigate('/add-recipe')
   }
+  const onChangeRecipe = () => {
+    navigate('/change-recipe')
+  }
   return (
     <div className='bg-white -mx-4'>
       <div className='pt-6 px-4'>
@@ -41,7 +44,7 @@ export const RecipeSesionReferral: React.FC = () => {
         <Button
           icon={images.ic_edit}
           className='btn-outline absolute right-0 mr-4 text-xxs'
-          onClick={() => console.log('Change')}
+          onClick={onChangeRecipe}
           label='Ubah Rekomendasi'
         />
       </div>
