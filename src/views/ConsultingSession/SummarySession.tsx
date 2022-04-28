@@ -2,7 +2,7 @@ import images from 'assets/images'
 import { Button, Input, SummaryItem } from 'components'
 import React, { useState } from 'react'
 
-export const SummarySesion: React.FC = () => {
+export const SummarySession: React.FC = () => {
   const [complaint, setComplaint] = useState<Array<string>>([
     'Gatal-Gatal pada permukaan kulit',
     'Ruam merah dan perih',

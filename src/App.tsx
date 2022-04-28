@@ -19,9 +19,14 @@ import {
   PrivacyPolicy,
   Help,
   ProfileChange,
+<<<<<<< HEAD
   ConsultingSesionParent,
   SetScheduleParent,
   AddRecommendation,
+=======
+  ConsultingSessionParent,
+  SetScheduleParent,
+>>>>>>> dev_consultingsesion_page
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -87,7 +92,7 @@ const App: React.FC<Props> = ({ basename }) => {
             <Route element={<SetScheduleParent />}>
               <Route path='/schedule/:type' />
             </Route>
-            <Route element={<ConsultingSesionParent />}>
+            <Route element={<ConsultingSessionParent />}>
               <Route path='/consulting-sesion/:type' />
             </Route>
           </Route>
