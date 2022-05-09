@@ -42,6 +42,7 @@ module.exports = {
       error: '#DB0707',
       success: '#06B73A',
       screen: '#F5F7FD',
+      highlight: '#F5CA80',
     },
     fontFamily: {
       bold: 'Montserrat Bold',
