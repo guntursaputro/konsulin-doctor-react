@@ -58,7 +58,7 @@ export const PRODUCT_LIST = [
 export const SCHEDULE_LIST = [
   {
     status: true,
-    date: 'Senin, 18 April 2022',
+    date: 'Senin, 9 Mei 2022',
     hour: ['10:00 - 11.30', '12.00 - 14.00', '14.30 - 15.30'],
   },
   {
@@ -148,5 +148,54 @@ export const FAQ_LIST = [
     question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit?',
     answer:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+]
+
+export const NOTIF_LIST = [
+  {
+    date: '9 Mei 2022',
+    body: [
+      {
+        title: 'Ada Jadwal Konsultasi Baru',
+        note: 'Guntur Saputro telah menjadwalkan konsultasi pada tanggal 20 Januari 2022',
+        hour: '08:20',
+      },
+      {
+        title: 'Konsultasi dibatalkan',
+        note: 'Admin menyetujui pembatalan jadwal konsultasi Guntur Saputro pada tanggal 20 Januari 2022',
+        hour: '08:20',
+        canceled: true,
+      },
+      {
+        title: 'Konsultasi Selesai',
+        note: 'Konsultasi Online Toto Prasetyo telah selesai',
+        hour: '08:20',
+      },
+      {
+        title: 'Konsultasi Online Dimulai',
+        note: 'Konsultasi Online Toto Prasetyo telah dimulai',
+        hour: '08:20',
+      },
+    ],
+  },
+  {
+    date: '1 Februari 2022',
+    body: [
+      {
+        title: 'Konsultasi Selesai',
+        note: 'Lorem ipsum dolor sit amet',
+        hour: '10:20',
+      },
+    ],
+  },
+  {
+    date: '1 Februari 2022',
+    body: [
+      {
+        title: 'Konsultasi Dimulai',
+        note: 'Lorem ipsum dolor sit amet',
+        hour: '09:30',
+      },
+    ],
   },
 ]
