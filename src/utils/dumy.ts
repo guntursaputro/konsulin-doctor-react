@@ -151,7 +151,7 @@ export const FAQ_LIST = [
   },
 ]
 
-export const NOTIF_LIST = [
+export const NOTIFICATION_LIST = [
   {
     date: '9 Mei 2022',
     body: [
@@ -159,22 +159,26 @@ export const NOTIF_LIST = [
         title: 'Ada Jadwal Konsultasi Baru',
         note: 'Guntur Saputro telah menjadwalkan konsultasi pada tanggal 20 Januari 2022',
         hour: '08:20',
+        isRead: false,
       },
       {
         title: 'Konsultasi dibatalkan',
         note: 'Admin menyetujui pembatalan jadwal konsultasi Guntur Saputro pada tanggal 20 Januari 2022',
         hour: '08:20',
+        isRead: true,
         canceled: true,
       },
       {
         title: 'Konsultasi Selesai',
         note: 'Konsultasi Online Toto Prasetyo telah selesai',
         hour: '08:20',
+        isRead: true,
       },
       {
         title: 'Konsultasi Online Dimulai',
         note: 'Konsultasi Online Toto Prasetyo telah dimulai',
         hour: '08:20',
+        isRead: true,
       },
     ],
   },
@@ -185,6 +189,7 @@ export const NOTIF_LIST = [
         title: 'Konsultasi Selesai',
         note: 'Lorem ipsum dolor sit amet',
         hour: '10:20',
+        isRead: true,
       },
     ],
   },
@@ -195,6 +200,7 @@ export const NOTIF_LIST = [
         title: 'Konsultasi Dimulai',
         note: 'Lorem ipsum dolor sit amet',
         hour: '09:30',
+        isRead: true,
       },
     ],
   },
