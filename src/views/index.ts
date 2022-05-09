@@ -31,3 +31,4 @@ export { RecipeSessionReferral } from './ConsultingSession/RecipeSessionReferral
 export { SummarySession } from './ConsultingSession/SummarySession'
 export { AddRecommendation } from './ConsultingSession/AddRecommendation'
 export { ChangeRecommendation } from './ConsultingSession/ChangeRecommendation'
+export { Notification } from './Notification'
