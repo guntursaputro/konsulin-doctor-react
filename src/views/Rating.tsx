@@ -22,7 +22,7 @@ export const Rating: React.FC = () => {
 
   return (
     <div>
-      <Header onBackClick={() => navigate('/rating')} label='Ulasan' />
+      <Header onBackClick={() => navigate(-1)} label='Ulasan' />
       {RATING_MENU.map((item) => (
         <div className='bg-white -mx-4 -mt-5 px-8 pb-6'>
           <div className='flex font-semi-bold justify-between text-sm'>
