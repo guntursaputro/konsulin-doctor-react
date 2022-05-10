@@ -28,6 +28,7 @@ import {
   ChangeRecipe,
   ChangeRecipeWithoutReferral,
   Notification,
+  Rating,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -90,6 +91,7 @@ const App: React.FC<Props> = ({ basename }) => {
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/help' element={<Help />} />
             <Route path='/notification' element={<Notification />} />
+            <Route path='/rating' element={<Rating />} />
             <Route path='/add-recommendation' element={<AddRecommendation />} />
             <Route
               path='/change-recommendation'

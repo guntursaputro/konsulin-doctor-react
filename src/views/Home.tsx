@@ -51,7 +51,10 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className='bg-highlight py-2 px-3 rounded-md flex items-center justify-between'>
+        <div
+          className='bg-highlight py-2 px-3 rounded-md flex items-center justify-between'
+          onClick={() => navigate('/rating')}
+        >
           <div className='flex items-center'>
             <img src={images.ic_thumb} alt='' className='h-5 w-5 mr-1' />
             <p className='text-xs'>Rating kepuasan pelanggan</p>

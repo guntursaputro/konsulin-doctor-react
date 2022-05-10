@@ -40,7 +40,7 @@ export const MENU_PROFILE = [
   {
     label: 'Ulasan & Rating',
     icon: images.ic_thumb,
-    to: '/review-rating',
+    to: '/rating',
   },
   {
     label: 'Atur Jadwal',
