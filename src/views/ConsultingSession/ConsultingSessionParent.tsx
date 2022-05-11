@@ -6,6 +6,7 @@ import {
   SummarySession,
   RecommendationSession,
   RecipeSessionReferral,
+  RecipeSessionWithoutReferral,
 } from 'views'
 import { SESION_MENU } from 'config/menu'
 import images from 'assets/images'
@@ -20,7 +21,7 @@ export const ConsultingSessionParent: React.FC = () => {
   const { type } = useParams()
 
   const onSesionMenuClick = (to: string) => {
-    navigate(to, {replace:true})
+    navigate(to, { replace: true })
   }
 
   const isActive = (key: string) => {
@@ -70,6 +71,10 @@ export const ConsultingSessionParent: React.FC = () => {
         <Route
           path='/consulting-sesion/recipe'
           element={<RecipeSessionReferral />}
+        />
+        <Route
+          path='/consulting-sesion/recipe-without-referral'
+          element={<RecipeSessionWithoutReferral />}
         />
       </Routes>
     </div>

@@ -19,12 +19,14 @@ interface ProductItemProps {
     note?: string
   }
   active?: boolean
+  deleted?: boolean
 }
 
 export const ProductItem: React.FC<ProductItemProps> = ({
   className,
   item,
   active,
+  deleted,
 }) => {
   const [isActive, setIsActive] = useState(false)
   const [form, setForm] = useState('')
@@ -87,11 +89,20 @@ export const ProductItem: React.FC<ProductItemProps> = ({
               max={20}
             />
             <div>
-              <Button
-                className='btn-outline text-xs !h-[40px] !w-56'
-                label='+ Masukan Rekomendasi'
-                onClick={onSubmit}
-              />
+              {deleted ? (
+                <Button
+                  onClick={() => console.log('delete')}
+                  icon={images.ic_trash}
+                  className='h6- w-6 text-xs !font-regular'
+                  label='Hapus'
+                />
+              ) : (
+                <Button
+                  className='btn-outline text-xs !h-[40px] !w-56'
+                  label='+ Masukan Rekomendasi'
+                  onClick={onSubmit}
+                />
+              )}
             </div>
           </div>
           <div>

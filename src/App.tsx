@@ -21,6 +21,11 @@ import {
   ProfileChange,
   ConsultingSessionParent,
   SetScheduleParent,
+  AddRecommendation,
+  ChangeRecommendation,
+  AddRecipe,
+  AddRecipeWithoutReferral,
+  ChangeRecipe,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -82,6 +87,17 @@ const App: React.FC<Props> = ({ basename }) => {
             <Route path='/faq' element={<Faq />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/help' element={<Help />} />
+            <Route path='/add-recommendation' element={<AddRecommendation />} />
+            <Route
+              path='/change-recommendation'
+              element={<ChangeRecommendation />}
+            />
+            <Route path='/add-recipe' element={<AddRecipe />} />
+            <Route path='/change-recipe' element={<ChangeRecipe />} />
+            <Route
+              path='/add-recipe-without-referral'
+              element={<AddRecipeWithoutReferral />}
+            />
             <Route element={<SetScheduleParent />}>
               <Route path='/schedule/:type' />
             </Route>

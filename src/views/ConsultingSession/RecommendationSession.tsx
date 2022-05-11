@@ -8,7 +8,11 @@ export const RecommendationSession: React.FC = () => {
   const navigate = useNavigate()
 
   const onAddRecomendation = () => {
-    navigate('/add-recomendation')
+    navigate('/add-recommendation')
+  }
+
+  const onChangeRecommendation = () => {
+    navigate('/change-recommendation')
   }
 
   return (
@@ -38,11 +42,11 @@ export const RecommendationSession: React.FC = () => {
       </div>
       <Button
         icon={images.ic_edit}
-        className='btn-outline mt-4 absolute right-0 mr-4 text-xxs'
-        onClick={() => console.log('Change')}
+        className='btn-outline mt-8 absolute right-0 mr-5 text-xxs'
+        onClick={onChangeRecommendation}
         label='Ubah Rekomendasi'
       />
-      <div className='mx-4 mt-24 -mb-16'>
+      <div className='mx-4 mt-32 -mb-16'>
         <Button
           icon={images.ic_send_white}
           label='Kirim Rekomendasi ke Pasien'
