@@ -61,13 +61,13 @@ export const Rating: React.FC = () => {
       <div className='-mx-4'>
         <p className='font-semi-bold my-4 ml-8'>Komentar</p>
         <div className='flex items-center'>
-          <img src={images.ic_left} alt='' className='w-6' />
+          <img src={images.ic_left} alt='' className='w-6 mr-2' />
           <div className='flex flex-col'>
             {COMMENT_LIST.map((item) => (
               <ReviewItem item={item} />
             ))}
           </div>
-          <img src={images.ic_right} alt='' className='w-6' />
+          <img src={images.ic_right} alt='' className='w-6 ml-2' />
         </div>
       </div>
     </div>
