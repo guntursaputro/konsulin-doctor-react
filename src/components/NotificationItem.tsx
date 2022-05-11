@@ -26,7 +26,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     >
       <div className='flex flex-col'>
         <p
-          className={`text-sm font-semibold ${
+          className={`text-sm font-semi-bold ${
             item.canceled ? 'text-error' : ''
           }`}
         >
