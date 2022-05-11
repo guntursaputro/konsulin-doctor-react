@@ -1,5 +1,5 @@
 import images from 'assets/images'
-import { Button, MedicineReferralItem } from 'components'
+import { Button, MedicineNoReferralItem } from 'components'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MEDICINE_LIST } from 'utils/dumy'
@@ -22,14 +22,14 @@ export const RecipeSessionWithoutReferral: React.FC = () => {
       </div>
       <div className='px-4'>
         {MEDICINE_LIST?.map((item) => (
-          <MedicineReferralItem item={item} disabled className='!pb-0' />
+          <MedicineNoReferralItem item={item} disabled className='!pb-0' />
         ))}
       </div>
       <div className='mt-6'>
         <Button
           icon={images.ic_edit}
           className='btn-outline absolute right-0 mr-4 text-xxs'
-          onClick={() => console.log('Change')}
+          onClick={() => navigate('/change-recipe-without-referral')}
           label='Ubah Rekomendasi'
         />
       </div>

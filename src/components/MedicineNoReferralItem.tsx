@@ -6,7 +6,7 @@ import { Button } from './Button/Button'
 import { Input } from './Input'
 import { PlusMinus } from './PlusMinus'
 
-interface MedicineReferralItemProps {
+interface MedicineNoReferralItemProps {
   className?: string
   active?: boolean
   disabled?: boolean
@@ -20,13 +20,15 @@ interface MedicineReferralItemProps {
     description: string
     image?: string
   }
+  edited?: boolean
 }
 
-export const MedicineReferralItem: React.FC<MedicineReferralItemProps> = ({
+export const MedicineNoReferralItem: React.FC<MedicineNoReferralItemProps> = ({
   className,
   active,
   disabled,
   item,
+  edited,
 }) => {
   const [isActive, setIsActive] = useState(false)
   const [form, setForm] = useState('')
@@ -92,7 +94,11 @@ export const MedicineReferralItem: React.FC<MedicineReferralItemProps> = ({
         </div>
       )}
 
-      <div className='flex justify-between items-center'>
+      <div
+        className={`flex justify-between items-center ${
+          edited ? '' : 'my - 4'
+        }`}
+      >
         <PlusMinus
           onChange={(e) => setCount(e)}
           value={count}
@@ -103,11 +109,20 @@ export const MedicineReferralItem: React.FC<MedicineReferralItemProps> = ({
 
         {active ? (
           <div>
-            <Button
-              className='btn-outline text-xs !h-[40px] !w-56 mt-5'
-              label='+ Masukan Resep'
-              onClick={onSubmit}
-            />
+            {edited ? (
+              <Button
+                onClick={() => console.log('delete')}
+                icon={images.ic_trash}
+                className='h6- w-6 text-xs !font-regular'
+                label='Hapus'
+              />
+            ) : (
+              <Button
+                className='btn-outline text-xs !h-[40px] !w-56'
+                label='+ Masukan Resep'
+                onClick={onSubmit}
+              />
+            )}
           </div>
         ) : (
           ''
