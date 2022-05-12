@@ -6,7 +6,7 @@ export const renderStar = (rate: number) => {
     if (x < rate) {
       tmp.push(<img src={images.ic_star_fill} alt='' className='w-3 h-3' />)
     } else {
-      tmp.push(<img src={images.ic_star} alt='' className='w-3 h-3' />)
+      tmp.push(<img src='' alt='' className='w-3 h-3' />)
     }
   }
   return tmp
