@@ -29,6 +29,8 @@ import {
   ChangeRecipeWithoutReferral,
   Notification,
   Rating,
+  AddSummaryComplaint,
+  AddSummaryDiagnosis,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -106,6 +108,16 @@ const App: React.FC<Props> = ({ basename }) => {
             <Route
               path='/change-recipe-without-referral'
               element={<ChangeRecipeWithoutReferral />}
+            />
+
+            <Route
+              path='/add-summary-complaint'
+              element={<AddSummaryComplaint />}
+            />
+
+            <Route
+              path='/add-summary-diagnosis'
+              element={<AddSummaryDiagnosis />}
             />
             <Route element={<SetScheduleParent />}>
               <Route path='/schedule/:type' />
