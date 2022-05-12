@@ -14,9 +14,10 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       white: '#FFFFFF',
-      yellow: '#f6ae2d',
+      yellow: '#F6AE2D',
       secondary: '#2c2829',
       gray: '#CECECE',
+      pink: '#EBD2DF',
       primary: {
         'more-lightest': '#FFF5FA',
         lightest: '#f7e1ec',
@@ -41,6 +42,7 @@ module.exports = {
       error: '#DB0707',
       success: '#06B73A',
       screen: '#F5F7FD',
+      highlight: '#F5CA80',
     },
     fontFamily: {
       bold: 'Montserrat Bold',

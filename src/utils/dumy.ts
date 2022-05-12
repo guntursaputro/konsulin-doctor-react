@@ -58,7 +58,7 @@ export const PRODUCT_LIST = [
 export const SCHEDULE_LIST = [
   {
     status: true,
-    date: 'Senin, 18 April 2022',
+    date: 'Senin, 9 Mei 2022',
     hour: ['10:00 - 11.30', '12.00 - 14.00', '14.30 - 15.30'],
   },
   {
@@ -90,15 +90,24 @@ export const COMMENT_LIST = [
 ]
 export const MEDICINE_LIST = [
   {
+    image: 'https://placekitten.com/500',
     name: 'Betametason 100-mg',
-    price: 25000,
+    price: 5000,
     amount: 1,
+    rate: 5,
+    store: 'Bening official store',
+    description: 'Deskripsi singkat',
     note: 'Oleskan tipis pada alergi bila terasa gatal',
   },
   {
+    image: 'https://placekitten.com/300',
     name: 'Antithistamin-8 strip',
     price: 125000,
-    amount: 4,
+    amount: 2,
+    rate: 5,
+    store: 'Bening official store',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, soluta!',
     note: 'Minum 3 kali sehari sesudah makan',
   },
 ]
@@ -139,5 +148,60 @@ export const FAQ_LIST = [
     question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit?',
     answer:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere, similique officiis',
+  },
+]
+
+export const NOTIFICATION_LIST = [
+  {
+    date: '9 Mei 2022',
+    body: [
+      {
+        title: 'Ada Jadwal Konsultasi Baru',
+        note: 'Guntur Saputro telah menjadwalkan konsultasi pada tanggal 20 Januari 2022',
+        hour: '08:20',
+        isRead: false,
+      },
+      {
+        title: 'Konsultasi dibatalkan',
+        note: 'Admin menyetujui pembatalan jadwal konsultasi Guntur Saputro pada tanggal 20 Januari 2022',
+        hour: '08:20',
+        isRead: true,
+        canceled: true,
+      },
+      {
+        title: 'Konsultasi Selesai',
+        note: 'Konsultasi Online Toto Prasetyo telah selesai',
+        hour: '08:20',
+        isRead: true,
+      },
+      {
+        title: 'Konsultasi Online Dimulai',
+        note: 'Konsultasi Online Toto Prasetyo telah dimulai',
+        hour: '08:20',
+        isRead: true,
+      },
+    ],
+  },
+  {
+    date: '1 Februari 2022',
+    body: [
+      {
+        title: 'Konsultasi Selesai',
+        note: 'Lorem ipsum dolor sit amet',
+        hour: '10:20',
+        isRead: true,
+      },
+    ],
+  },
+  {
+    date: '1 Februari 2022',
+    body: [
+      {
+        title: 'Konsultasi Dimulai',
+        note: 'Lorem ipsum dolor sit amet',
+        hour: '09:30',
+        isRead: true,
+      },
+    ],
   },
 ]

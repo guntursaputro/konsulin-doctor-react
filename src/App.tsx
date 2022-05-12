@@ -19,10 +19,20 @@ import {
   PrivacyPolicy,
   Help,
   ProfileChange,
-  ConsultingSesionParent,
+  ConsultingSessionParent,
+  SetScheduleParent,
+  AddRecommendation,
+  ChangeRecommendation,
+  AddRecipe,
+  AddRecipeWithoutReferral,
+  ChangeRecipe,
+  ChangeRecipeWithoutReferral,
+  Notification,
+  Rating,
+  AddSummaryComplaint,
+  AddSummaryDiagnosis,
 } from 'views'
 import { isLogin } from 'utils/auth'
-import { SetScheduleParent } from 'views/SetSchedule/SetScheduleParent'
 
 type Props = {
   basename: string
@@ -82,10 +92,37 @@ const App: React.FC<Props> = ({ basename }) => {
             <Route path='/faq' element={<Faq />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/help' element={<Help />} />
+            <Route path='/notification' element={<Notification />} />
+            <Route path='/rating' element={<Rating />} />
+            <Route path='/add-recommendation' element={<AddRecommendation />} />
+            <Route
+              path='/change-recommendation'
+              element={<ChangeRecommendation />}
+            />
+            <Route path='/add-recipe' element={<AddRecipe />} />
+            <Route path='/change-recipe' element={<ChangeRecipe />} />
+            <Route
+              path='/add-recipe-without-referral'
+              element={<AddRecipeWithoutReferral />}
+            />
+            <Route
+              path='/change-recipe-without-referral'
+              element={<ChangeRecipeWithoutReferral />}
+            />
+
+            <Route
+              path='/add-summary-complaint'
+              element={<AddSummaryComplaint />}
+            />
+
+            <Route
+              path='/add-summary-diagnosis'
+              element={<AddSummaryDiagnosis />}
+            />
             <Route element={<SetScheduleParent />}>
               <Route path='/schedule/:type' />
             </Route>
-            <Route element={<ConsultingSesionParent />}>
+            <Route element={<ConsultingSessionParent />}>
               <Route path='/consulting-sesion/:type' />
             </Route>
           </Route>

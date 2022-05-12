@@ -4,16 +4,19 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MEDICINE_LIST } from 'utils/dumy'
 
-export const RecipeSesionRefferal: React.FC = () => {
+export const RecipeSessionReferral: React.FC = () => {
   const navigate = useNavigate()
   const onAddRecipe = () => {
     navigate('/add-recipe')
+  }
+  const onChangeRecipe = () => {
+    navigate('/change-recipe')
   }
   return (
     <div className='bg-white -mx-4'>
       <div className='pt-6 px-4'>
         <p className='text-black-lighter text-xs font-semi-bold border-b-[2px] border-b-gray'>
-          KLINIK REFFERAL
+          KLINIK REFERRAL
         </p>
         <p className='font-semi-bold text-xs mt-2'>#BNG001-JK</p>
         <p className='font-semi-bold text-xs my-2'>
@@ -37,13 +40,15 @@ export const RecipeSesionRefferal: React.FC = () => {
           <MedicineItem item={item} />
         ))}
       </div>
-      <Button
-        icon={images.ic_edit}
-        className='btn-outline mt-4 absolute right-0 mr-4 text-xxs'
-        onClick={() => console.log('Change')}
-        label='Ubah Rekomendasi'
-      />
-      <div className='mx-4 mt-24 -mb-16'>
+      <div className='mt-6'>
+        <Button
+          icon={images.ic_edit}
+          className='btn-outline absolute right-0 mr-4 text-xxs'
+          onClick={onChangeRecipe}
+          label='Ubah Rekomendasi'
+        />
+      </div>
+      <div className='mx-4 mt-32 -mb-16'>
         <Button
           icon={images.ic_send_white}
           label='Kirim Rekomendasi ke Pasien'

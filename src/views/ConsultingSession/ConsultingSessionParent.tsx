@@ -2,10 +2,11 @@ import React from 'react'
 import { Header } from 'components'
 import { Route, Routes, useNavigate, useParams } from 'react-router-dom'
 import {
-  ChatSesion,
-  SummarySesion,
-  RecommendationSesion,
-  RecipeSesionRefferal,
+  ChatSession,
+  SummarySession,
+  RecommendationSession,
+  RecipeSessionReferral,
+  RecipeSessionWithoutReferral,
 } from 'views'
 import { SESION_MENU } from 'config/menu'
 import images from 'assets/images'
@@ -15,12 +16,12 @@ export const HEADER_ICON = [
   { icon: images.ic_dots },
 ]
 
-export const ConsultingSesionParent: React.FC = () => {
+export const ConsultingSessionParent: React.FC = () => {
   const navigate = useNavigate()
   const { type } = useParams()
 
   const onSesionMenuClick = (to: string) => {
-    navigate(to)
+    navigate(to, { replace: true })
   }
 
   const isActive = (key: string) => {
@@ -33,11 +34,7 @@ export const ConsultingSesionParent: React.FC = () => {
         onBackClick={() => navigate(-1)}
         label='Guntur Saputro'
         profile={images.ic_user}
-        icon={
-          type === 'chat' || type === 'recommendation'
-            ? HEADER_ICON
-            : [{ icon: images.ic_dots }]
-        }
+        icon={type === 'chat' ? HEADER_ICON : []}
         iconClassName='w-6 h-6'
       />
       <div className='scroll-x !space-x-2 snap-x snap-mandatory py-3 -mx-4 -mt-5'>
@@ -61,15 +58,19 @@ export const ConsultingSesionParent: React.FC = () => {
         ))}
       </div>
       <Routes>
-        <Route path='/consulting-sesion/chat' element={<ChatSesion />} />
-        <Route path='/consulting-sesion/summary' element={<SummarySesion />} />
+        <Route path='/consulting-sesion/chat' element={<ChatSession />} />
+        <Route path='/consulting-sesion/summary' element={<SummarySession />} />
         <Route
           path='/consulting-sesion/recommendation'
-          element={<RecommendationSesion />}
+          element={<RecommendationSession />}
         />
         <Route
           path='/consulting-sesion/recipe'
-          element={<RecipeSesionRefferal />}
+          element={<RecipeSessionReferral />}
+        />
+        <Route
+          path='/consulting-sesion/recipe-without-referral'
+          element={<RecipeSessionWithoutReferral />}
         />
       </Routes>
     </div>

@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import { Switch } from './Switch/Switch'
 import { Button } from './Button/Button'
 import images from '../assets/images'
+import { renderToday } from 'utils'
 
 interface ScheduleItemProps {
   className?: string
@@ -29,45 +30,12 @@ export const ScheduleItem: React.FC<ScheduleItemProps> = ({
     onChange([item])
   }
 
-  const isTodayDate = () => {
-    let day = new Date(),
-      weekday = [
-        'Minggu',
-        'Senin',
-        'Selasa',
-        'Rabu',
-        'Kamis',
-        'Jumat',
-        'Sabtu',
-      ],
-      dayOfWeek = weekday[day.getDay()],
-      date = day.getDate().toString(),
-      month = [
-        'Januari',
-        'Februari',
-        'Maret',
-        'April',
-        'Mei',
-        'Juni',
-        'Juli',
-        'Agustus',
-        'September',
-        'Oktober',
-        'November',
-        'Desember',
-      ],
-      dayOfMonth = month[day.getMonth()],
-      year = day.getFullYear().toString()
-    let today = `${dayOfWeek}, ${date} ${dayOfMonth} ${year}`
-    return today === item.date
-  }
-
   return (
     <div
       className={clsx(
         'bg-white drop-shadow flex flex-col px-4 py-3 mb-3 justify-start rounded-lg',
         className,
-        isTodayDate() ? 'bg-[#f5ca80]' : ''
+        renderToday(item.date) ? 'bg-highlight' : ''
       )}
     >
       <div className='flex justify-between content-center'>

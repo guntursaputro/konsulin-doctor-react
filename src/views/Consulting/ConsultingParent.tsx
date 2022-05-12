@@ -8,7 +8,7 @@ import { Online, Scheduled, Completed } from 'views'
 export const ConsultingParent: React.FC = () => {
   return (
     <div className='-mt-[4rem]'>
-      <Banner />
+      <Banner url='/notification' />
       <div className='pt-[6.5rem] bg-white -mx-4 px-4'>
         <Tabs items={TABS_CONSULTING} />
       </div>

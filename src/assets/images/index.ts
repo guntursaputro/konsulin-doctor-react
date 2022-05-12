@@ -67,6 +67,12 @@ import ic_send_white from './ic_send_white.png'
 import ic_edit from './ic_edit.png'
 import ic_attach_black from './ic_attach_black.png'
 import ic_send_black from './ic_send_black.png'
+import ic_sorting from './ic_sorting.png'
+import ic_search_loop from './ic_search_loop.png'
+import ic_plus_grey from './ic_plus_grey.png'
+import ic_minus_grey from './ic_minus_grey.png'
+import ic_right from './ic_right.png'
+import ic_left from './ic_left.png'
 
 const images = {
   bg_home,
@@ -138,6 +144,12 @@ const images = {
   ic_edit,
   ic_attach_black,
   ic_send_black,
+  ic_search_loop,
+  ic_sorting,
+  ic_minus_grey,
+  ic_plus_grey,
+  ic_right,
+  ic_left,
 }
 
 export default images

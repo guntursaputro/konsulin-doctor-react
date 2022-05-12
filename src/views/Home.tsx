@@ -23,7 +23,7 @@ export const Home: React.FC = () => {
 
   return (
     <div className='-mt-[4rem]'>
-      <Banner />
+      <Banner url='/notification' />
       <div className='pt-[5rem] bg-white -mx-4 p-4 mb-4'>
         <div className='mt-[2rem] mb-2'>
           <div className='flex items-center justify-between '>
@@ -51,7 +51,10 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className='bg-[#f5ca80] py-2 px-3 rounded-md flex items-center justify-between'>
+        <div
+          className='bg-highlight py-2 px-3 rounded-md flex items-center justify-between'
+          onClick={() => navigate('/rating')}
+        >
           <div className='flex items-center'>
             <img src={images.ic_thumb} alt='' className='h-5 w-5 mr-1' />
             <p className='text-xs'>Rating kepuasan pelanggan</p>
