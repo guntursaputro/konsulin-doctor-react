@@ -40,7 +40,10 @@ export const Login: React.FC = () => {
           onClick={onSubmit}
         />
         <p className='text-center text-sm mt-4'>
-          Lupa PIN ? <b className='font-bold'>Klik Disini</b>
+          Lupa PIN ?{' '}
+          <b className='font-bold' onClick={() => navigate('/verify-otp')}>
+            Klik Disini
+          </b>
         </p>
       </div>
     </div>
