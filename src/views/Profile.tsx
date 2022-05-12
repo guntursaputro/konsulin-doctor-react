@@ -7,13 +7,14 @@ import { useNavigate } from 'react-router-dom'
 export const Profile: React.FC = () => {
   const [showSetting, setShowSetting] = useState(false)
   const navigate = useNavigate()
+
   const onSetting = () => {
     setShowSetting(true)
     console.log('click')
   }
 
   const doLogout = () => {
-    console.log('logout')
+    navigate('/login')
   }
   return (
     <div className='-mt-[4rem]'>
@@ -71,7 +72,7 @@ export const Profile: React.FC = () => {
         <div className='bg-white rounded-lg'>
           <div
             className='flex items-center px-8 py-4'
-            onClick={() => navigate('/profile/contact-info')}
+            onClick={() => navigate('/schedule/set-schedule')}
           >
             <img
               src={images.ic_notification_profile}

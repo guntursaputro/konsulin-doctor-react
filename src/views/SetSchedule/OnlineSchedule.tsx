@@ -1,5 +1,5 @@
 import images from 'assets/images'
-import { Button, ScheduleItem } from 'components'
+import { Button, Modal, ScheduleItem } from 'components'
 import React, { useState } from 'react'
 export const SCHEDULE_LIST = [
   {
@@ -52,8 +52,8 @@ export const SCHEDULE_LIST = [
 ]
 
 export const OnlineSchedule: React.FC = () => {
+  const [isNewSchedule, setIsNewSchedule] = useState(false)
   const [scheduleData, setScheduleData] = useState(SCHEDULE_LIST)
-  console.log(scheduleData)
 
   return (
     <div>
@@ -65,6 +65,7 @@ export const OnlineSchedule: React.FC = () => {
         <ScheduleItem
           item={item}
           onChange={() => setScheduleData([...scheduleData])}
+          onClicked={() => setIsNewSchedule(true)}
           active
         />
       ))}
@@ -75,6 +76,36 @@ export const OnlineSchedule: React.FC = () => {
         className='bg-primary-base !w-full text-white mt-36'
         label='Simpan Perubahan'
       />
+      <Modal
+        show={isNewSchedule}
+        dialogClassName='!items-end !justify-end'
+        onHide={() => setIsNewSchedule(false)}
+      >
+        <div className='bg-white rounded-t-2xl text-center font-bold'>
+          <p className='pt-4 mb-6'>Pilih Jam untuk Sesi Baru</p>
+          <p className='mb-5'>Senin</p>
+          <div className='font-regular flex justify-center items-center'>
+            <div className='border rounded-xl py-2 px-6'>
+              <p>
+                00 <span className='mx-4'>:</span> 01
+              </p>
+            </div>
+            <p className='mx-7'>-</p>
+            <div className='border rounded-xl py-2 px-6'>
+              <p>
+                00 <span className='mx-4'>:</span> 30
+              </p>
+            </div>
+          </div>
+          <div className='!mx-4 pb-28'>
+            <Button
+              onClick={() => console.log('Submit')}
+              className='btn-primary mt-12 !w-full'
+              label='Buat Sesi Baru'
+            />
+          </div>
+        </div>
+      </Modal>
     </div>
   )
 }
