@@ -34,11 +34,7 @@ export const ConsultingSessionParent: React.FC = () => {
         onBackClick={() => navigate(-1)}
         label='Guntur Saputro'
         profile={images.ic_user}
-        icon={
-          type === 'chat' || type === 'recommendation'
-            ? HEADER_ICON
-            : [{ icon: images.ic_dots }]
-        }
+        icon={type === 'chat' ? HEADER_ICON : []}
         iconClassName='w-6 h-6'
       />
       <div className='scroll-x !space-x-2 snap-x snap-mandatory py-3 -mx-4 -mt-5'>

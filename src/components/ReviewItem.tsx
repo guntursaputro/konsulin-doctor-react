@@ -15,7 +15,7 @@ export const ReviewItem: React.FC<ReviewItemProps> = ({ className, item }) => {
         className
       )}
     >
-      <div className='flex justify-between'>
+      <div className='flex justify-between mb-2'>
         <div className='flex'>{renderStar(item.rating)}</div>
         <p className='text-xxs'>{item.name}</p>
       </div>

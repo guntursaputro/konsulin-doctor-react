@@ -22,7 +22,7 @@ export const Rating: React.FC = () => {
 
   return (
     <div>
-      <Header onBackClick={() => navigate('/rating')} label='Ulasan' />
+      <Header onBackClick={() => navigate(-1)} label='Ulasan' />
       {RATING_MENU.map((item) => (
         <div className='bg-white -mx-4 -mt-5 px-8 pb-6'>
           <div className='flex font-semi-bold justify-between text-sm'>
@@ -61,13 +61,13 @@ export const Rating: React.FC = () => {
       <div className='-mx-4'>
         <p className='font-semi-bold my-4 ml-8'>Komentar</p>
         <div className='flex items-center'>
-          <img src={images.ic_left} alt='' className='w-6' />
+          <img src={images.ic_left} alt='' className='w-6 mr-2' />
           <div className='flex flex-col'>
             {COMMENT_LIST.map((item) => (
               <ReviewItem item={item} />
             ))}
           </div>
-          <img src={images.ic_right} alt='' className='w-6' />
+          <img src={images.ic_right} alt='' className='w-6 ml-2' />
         </div>
       </div>
     </div>
