@@ -86,15 +86,11 @@ export const OnlineSchedule: React.FC = () => {
           <p className='mb-5'>Senin</p>
           <div className='font-regular flex justify-center items-center'>
             <div className='border rounded-xl py-2 px-6'>
-              <p>
-                00 <span className='mx-4'>:</span> 01
-              </p>
+              <input type='time' />
             </div>
             <p className='mx-7'>-</p>
             <div className='border rounded-xl py-2 px-6'>
-              <p>
-                00 <span className='mx-4'>:</span> 30
-              </p>
+              <input type='time' />
             </div>
           </div>
           <div className='!mx-4 pb-28'>
