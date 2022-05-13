@@ -45,7 +45,10 @@ export const ConsultingSessionParent: React.FC = () => {
         onHide={() => setIsClicked(false)}
       >
         <div className='bg-white w-1/2 float-right mr-4 mt-4 pl-2 py-3 rounded-md text-xs'>
-          <div className='flex mb-1.5 items-center'>
+          <div
+            className='flex mb-1.5 items-center'
+            onClick={() => navigate('/schedule/set-schedule')}
+          >
             <img
               src={images.ic_nonotification}
               alt=''
