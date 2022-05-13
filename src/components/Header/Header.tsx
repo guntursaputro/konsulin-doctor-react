@@ -1,5 +1,6 @@
 import images from 'assets/images'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Header.scss'
 
 // interface iconItems {
@@ -18,8 +19,9 @@ interface HeaderPropss {
   onSecondarySearchClick?: (e: any) => void
   hasInbox?: boolean
   profile?: string
-  icon?: { icon: string }[]
+  icon?: { icon: string; to?: string }[]
   iconClassName?: string
+  onIconClick?: (e: any) => void
 }
 
 export const Header: React.FC<HeaderPropss> = ({
@@ -31,12 +33,19 @@ export const Header: React.FC<HeaderPropss> = ({
   onCartClick,
   onSearchClick,
   onFilterClick,
+  onIconClick,
   onSecondarySearchClick,
   hasInbox,
   profile,
   icon,
   iconClassName,
 }) => {
+  const navigate = useNavigate()
+
+  const handleOnItemClick = (to: any) => {
+    navigate(to)
+  }
+
   return (
     <div className='component__header h-[60px] max-h-[60px] bg-white max-w-content fixed top-0 w-full flex flex-col justify-center z-50 px-4 py-2 -ml-4'>
       <div className='safe-top flex items-center justify-between'>
@@ -70,6 +79,7 @@ export const Header: React.FC<HeaderPropss> = ({
               src={item.icon}
               alt=''
               className={`mx-1.5 ,${iconClassName}`}
+              onClick={item.to ? () => handleOnItemClick(item.to) : onIconClick}
             />
           ))}
 
