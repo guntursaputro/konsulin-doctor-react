@@ -64,9 +64,6 @@ export const ConsultationItem: React.FC<ConsultationItemProps> = ({
             : item.status}
         </p>
       </div>
-      <div className='mx-2 self-start h-4 min-w-fit'>
-        <img src={images.ic_dots} alt='dots' className='h-full' />
-      </div>
     </div>
   )
 }
