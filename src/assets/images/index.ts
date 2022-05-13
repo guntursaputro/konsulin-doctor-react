@@ -73,6 +73,7 @@ import ic_plus_grey from './ic_plus_grey.png'
 import ic_minus_grey from './ic_minus_grey.png'
 import ic_right from './ic_right.png'
 import ic_left from './ic_left.png'
+import ic_nonotification from './ic_nonotification.png'
 
 const images = {
   bg_home,
@@ -150,6 +151,7 @@ const images = {
   ic_plus_grey,
   ic_right,
   ic_left,
+  ic_nonotification,
 }
 
 export default images

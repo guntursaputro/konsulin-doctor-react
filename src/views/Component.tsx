@@ -43,6 +43,7 @@ export const Component: React.FC = () => {
           item={item}
           active
           onChange={() => setScheduleData([...scheduleData])}
+          onClicked={() => console.log('click')}
         />
       ))}
 

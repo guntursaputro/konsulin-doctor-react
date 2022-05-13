@@ -14,6 +14,7 @@ interface ScheduleItemProps {
     hour: string[]
   }
   onChange: (e: Array<any>) => void
+  onClicked: (e: boolean) => void
 }
 
 export const ScheduleItem: React.FC<ScheduleItemProps> = ({
@@ -21,13 +22,20 @@ export const ScheduleItem: React.FC<ScheduleItemProps> = ({
   className,
   item,
   onChange,
+  onClicked,
 }) => {
   const [isActive, setActive] = useState(item.status)
+  const [isClicked, setIsClicked] = useState(false)
 
   const handleChange = (e: any) => {
     setActive(e.target.checked)
     item.status = !isActive
     onChange([item])
+  }
+
+  const handleClick = () => {
+    setIsClicked(!isClicked)
+    onClicked(isClicked)
   }
 
   return (
@@ -74,7 +82,7 @@ export const ScheduleItem: React.FC<ScheduleItemProps> = ({
             <Button
               className='btn-tertiary font-xs mt-1 !h-[2rem]'
               label='+ Buat Sesi Baru'
-              onClick={() => console.log('Buat Sesi Baru')}
+              onClick={handleClick}
             />
             <Button
               className='text-xs font-semi-bold self-end !h-[2rem]'

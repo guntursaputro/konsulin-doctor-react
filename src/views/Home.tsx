@@ -97,7 +97,11 @@ export const Home: React.FC = () => {
       </div>
       <div>
         {SCHEDULE_LIST?.map((item) => (
-          <ScheduleItem item={item} onChange={(e) => console.log(e)} />
+          <ScheduleItem
+            item={item}
+            onChange={(e) => console.log(e)}
+            onClicked={() => console.log('click')}
+          />
         ))}
       </div>
     </div>

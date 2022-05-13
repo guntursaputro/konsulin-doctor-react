@@ -22,8 +22,6 @@ export const renderToday = (itemDate: string) => {
   let today = `${dayOfWeek}, ${date} ${dayOfMonth} ${year}`
   let noDay = `${date} ${dayOfMonth} ${year}`
 
-  console.log('Today: ', today, itemDate)
-
   if (today === itemDate) {
     return true
   } else if (noDay === itemDate) {
