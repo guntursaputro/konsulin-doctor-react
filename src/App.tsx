@@ -32,6 +32,7 @@ import {
   AddSummaryComplaint,
   AddSummaryDiagnosis,
   SplashScreen,
+  PasswordUpdate,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -90,6 +91,7 @@ const App: React.FC<Props> = ({ basename }) => {
               element={<ConsultingDetail />}
             />
             <Route path='/personal-info' element={<PersonalInfo />} />
+            <Route path='/password-update' element={<PasswordUpdate />} />
             <Route path='/profile-change' element={<ProfileChange />} />
             <Route path='/faq' element={<Faq />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
