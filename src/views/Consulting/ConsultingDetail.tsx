@@ -20,17 +20,16 @@ export const ConsultingDetail: React.FC = () => {
         <div className='-mt-4 -mx-4 p-4 h-full !bg-white'>
           <Header label='Konsultasi' onBackClick={() => navigate(-1)} />
           <div className='-mt-5'>
-            <div className='flex -mx-4 justify-between p-4 bg-gradient-to-b from-[#dedede] to-[#eee]'>
+            <div className='flex -mx-4 p-4 bg-gradient-to-b from-[#dedede] to-[#eee] gap-8 items-center'>
               <img
                 src={item.image ? item.image : images.ic_user}
                 alt=''
                 className='w-12 h-12 rounded-full'
               />
-              <div className='basis-3/4 self-center'>
+              <div>
                 <p className='text-sm font-bold'>{item.name}</p>
                 <p className='text-xs'>User Konsulin App</p>
               </div>
-              <img src={images.ic_dots} alt='' className='w-5 h-5' />
             </div>
             <div className='bg-white py-4 -mx-4'>
               <div className='mx-4 text-xs'>
@@ -58,7 +57,12 @@ export const ConsultingDetail: React.FC = () => {
                 </div>
               )}
               <p className='text-xs mb-3'>Atau</p>
-              <p className='text-base font-bold'>Hubungi CS</p>
+              <p
+                className='text-base font-bold'
+                onClick={() => navigate('/help')}
+              >
+                Hubungi CS
+              </p>
             </div>
           </div>
         </div>

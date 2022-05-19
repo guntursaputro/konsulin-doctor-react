@@ -31,6 +31,8 @@ import {
   Rating,
   AddSummaryComplaint,
   AddSummaryDiagnosis,
+  SplashScreen,
+  PasswordUpdate,
 } from 'views'
 import { isLogin } from 'utils/auth'
 
@@ -71,6 +73,7 @@ const App: React.FC<Props> = ({ basename }) => {
     <Suspense fallback={() => 'loading ....'}>
       <BrowserRouter basename={basename}>
         <Routes>
+          <Route path='/' element={<SplashScreen />} />
           <Route element={<ProtectedRoute wrapperContent={false} />}>
             <Route path='/login' element={<Login />} />
             <Route path='/password-input' element={<PasswordInput />} />
@@ -88,6 +91,7 @@ const App: React.FC<Props> = ({ basename }) => {
               element={<ConsultingDetail />}
             />
             <Route path='/personal-info' element={<PersonalInfo />} />
+            <Route path='/password-update' element={<PasswordUpdate />} />
             <Route path='/profile-change' element={<ProfileChange />} />
             <Route path='/faq' element={<Faq />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
